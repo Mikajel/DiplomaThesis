@@ -1,0 +1,125 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Front page
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\thispagestyle{empty}
+\ifthenelse {\boolean{english}}
+{
+	{\Large Slovak University of Technology in Bratislava}\textbf{}\\
+	{\Large Faculty of Informatics and Information Technologies}\textbf{}\\[\baselineskip]
+}
+{
+	{\Large Slovenská technická univerzita v Bratislave}\textbf{}\\
+	{\Large Fakulta informatiky a informačných technológií}\textbf{}\\[\baselineskip]
+}
+{\large \FIIT}\\
+\vspace*{4cm}
+{\Large \Author}\textbf{}\\[\baselineskip]
+{\huge \Title}\textbf{}\\[\baselineskip]
+\ifthenelse {\boolean{english}}
+{
+	\ifthenelse {\boolean{bachelor}}
+	{
+		{\large Bachelor thesis}\\
+	}
+	{
+		{\large Master thesis}\\
+	}
+}
+{
+	\ifthenelse {\boolean{bachelor}}
+	{
+		{\large Bakalárska práca}\\
+	}
+	{
+		{\large Diplomová práca}\\
+	}
+}
+
+\end{center}
+\vspace{\stretch{1}}
+\ifthenelse {\boolean{english}}
+{
+	Supervisor: \Supervisor \\\\
+	\Year,\ \MonthENG 
+}
+{
+	Vedúci práce: \Supervisor \\\\
+    \MonthSVK,\ \Year
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Title page
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{center}
+\thispagestyle{empty}
+\ifthenelse {\boolean{english}}
+{
+	{\Large Slovak University of Technology in Bratislava}\textbf{}\\
+	{\Large Faculty of Informatics and Information Technologies}\textbf{}\\[\baselineskip]
+}
+{
+	{\Large Slovenská technická univerzita v Bratislave}\textbf{}\\
+	{\Large Fakulta informatiky a informačných technológií}\textbf{}\\[\baselineskip]
+}
+{\large \FIIT}\\
+\vspace*{4cm}
+{\Large \Author}\textbf{}\\[\baselineskip]
+{\huge \Title}\textbf{}\\[\baselineskip]
+\ifthenelse {\boolean{english}}
+{
+	\ifthenelse {\boolean{bachelor}}
+	{
+		{\large Bachelor thesis}\\
+	}
+	{
+		{\large Master thesis}\\
+	}
+}
+{
+	\ifthenelse {\boolean{bachelor}}
+	{
+		{\large Bakalárska práca}\\
+	}
+	{
+		{\large Diplomová práca}\\
+	}
+}
+\end{center}
+\vspace{\stretch{1}}
+\ifthenelse {\boolean{english}}
+{
+	\textrm{
+	    \begin{normalsize}
+	    \begin{flushleft}
+	    \begin{tabular}{ll}
+			Study program: & \Program\\ 
+			Field of study: & \Field\\
+			Place: & \Place\\
+			Supervisor: & \Supervisor \\
+			\Year,\ \MonthENG
+	    \end{tabular}
+	    \end{flushleft}
+	  \end{normalsize}
+	}		
+}
+{
+	\textrm{
+	    \begin{normalsize}
+	    \begin{flushleft}
+	    \begin{tabular}{ll}
+			Študijný program: & \Program\\ 
+			Študijný odbor: & \Field\\
+			Miesto vypracovania: & \Place\\
+			Vedúci práce: & \Supervisor \\
+		    \MonthSVK,\ \Year
+	    \end{tabular}
+	    \end{flushleft}
+	  \end{normalsize}
+	}	
+}

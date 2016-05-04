@@ -1,0 +1,65 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Slovak annotation
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{plain}
+\begin{center}
+\begin{Large}
+\textbf{Anotácia} \\
+\end{Large}
+\end{center}
+Slovenská technická univerzita v Bratislave \\
+FAKULTA INFORMATIKY A INFORMAČNÝCH TECHNOLÓGIÍ 
+\noindent
+	\textrm{
+	    \begin{normalsize}
+	    \begin{flushleft}
+	    \begin{tabular}{@{}lp{0.7\textwidth}@{}}
+			Študijný program: & \Program\\ 
+			\ifthenelse {\boolean{bachelor}}{{Bakalárska práca: }}{{Diplomová práca: }} & \TitleSVK \\
+			Autor: & \Author \\
+			Vedúci práce: & \Supervisor \\
+			\MonthSVK,\ \Year
+	    \end{tabular}
+	    \end{flushleft}
+	  \end{normalsize}
+	}
+\noindent
+\\
+\input{thesis/anotation-Slovak.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% English annotation
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{plain}
+\begin{center}
+\begin{Large}
+\textbf{Annotation} \\
+\end{Large}
+\end{center}
+Slovak University of Technology Bratislava \\
+FACULTY OF INFORMATICS AND INFORMATION TECHNOLOGIES 
+\noindent
+	\textrm{
+	    \begin{normalsize}
+	    \begin{flushleft}
+	    \begin{tabular}{@{}lp{0.7\textwidth}@{}}
+			Study program: & \Program\\ 
+			\ifthenelse {\boolean{bachelor}}{{Bachelor thesis: }}{{Master thesis: }} & \TitleENG \\
+			Author: & \Author \\
+			Supervisor: & \Supervisor \\
+			\Year,\ \MonthENG
+	    \end{tabular}
+	    \end{flushleft}
+	  \end{normalsize}
+	}
+\noindent
+\\
+\input{thesis/anotation-English.tex}

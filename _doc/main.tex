@@ -1,0 +1,137 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% DON'T TOUCH ANYTHING !!!
+%% edit only files in thesis folder (unless you are upgrading this thesis template)
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Language: english, slovak
+% Document type: report (master/bachelor thesis)
+\documentclass[a4paper,12pt,appendix]{report}
+
+%%
+%% Define boolean variables - must be here, don't touch
+%%
+\usepackage{ifthen}
+\newboolean{english}
+\newboolean{bachelor}
+
+%%
+%% !!!! edit Author options (thesis style and language)
+%%
+\input{thesis/user-options.tex}
+
+%%
+%% Formats and Defs
+%%
+\input{template/FormatsAndDefs.tex}
+
+%%
+%% !!!! edit Author details
+%%
+\input{thesis/user-config.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Language
+\ifthenelse {\boolean{english}}
+{
+	\renewcommand{\lstlistingname}{Example}
+	\renewcommand{\lstlistlistingname}{List of Examples}
+	\renewcommand{\bibname}{Bibliography}
+	\renewcommand{\appendixname}{Appendix}
+	\renewcommand{\appendixtocname}{Appendix}		
+}
+{
+	\renewcommand{\lstlistingname}{Ukážka}
+	\renewcommand{\lstlistlistingname}{Zoznam ukážok}	
+	\renewcommand{\bibname}{Literatúra}
+	\renewcommand{\appendixname}{Príloha}
+	\renewcommand{\appendixtocname}{Prílohy}		
+}
+
+%%
+%% Title Page
+%%
+\input{template/titlepage.tex}
+
+%%
+%% Empty page for assigment
+%%
+\input{template/assigment.tex}
+
+%%
+%% Anotation
+%%
+\pagenumbering{roman}
+\setcounter{page}{2}
+\input{template/anotation.tex}
+
+%%
+%% Declaration
+%%
+\input{template/declaration.tex}
+
+%%
+%% Contents
+%%
+%\pagestyle{empty}
+\newpage
+\tableofcontents{}
+
+%%
+%% Lists
+%%
+ \newpage
+% List of Figures
+ \listoffigures  
+ \newpage
+% List of Tables
+ \listoftables
+ \newpage
+% List of Listings
+ \lstlistoflistings
+
+
+%%
+%% Clear Page And Set New Page Counter
+%%
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+%%
+%% Thesis 
+%%
+\input{thesis.tex}
+
+%%
+%% References
+%%
+\newpage
+\addcontentsline{toc}{chapter}{\bibname}
+\bibliographystyle{plain}
+\bibliography{bibtex/references.bib}
+
+
+
+%%
+%% Appendix
+%%
+\appendix
+\input{thesis/appendices.tex}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% PDF meta-data 
+\hypersetup{%
+pdftitle={\Title},%
+pdfauthor={\Author},%
+pdfkeywords={\Keywords},%
+}
