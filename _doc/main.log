@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.11)  6 MAY 2016 01:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.11)  6 MAY 2016 09:41
 entering extended mode
 **./main.tex
 (main.tex
@@ -588,7 +588,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--25
  []
 
 ) [6] (main.toc
-Overfull \hbox (0.38739pt too wide) detected at line 17
+Overfull \hbox (0.38739pt too wide) detected at line 21
  []\T1/lmr/m/n/12 A-1
  []
 
@@ -645,43 +645,44 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.20 
+l.21 
       [2
 
 ]
 
 Package hyperref Warning: Composite letter `\textasciicaron+C'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 31.
+(hyperref)                removing `\textasciicaron' on input line 38.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 31.
+(hyperref)                removing `\textasciicaron' on input line 38.
 
-<figures/figure.png, id=184, 602.25pt x 484.81125pt>
+<figures/figure.png, id=203, 602.25pt x 484.81125pt>
 File: figures/figure.png Graphic file (type png)
  <use figures/figure.png>
-Package pdftex.def Info: figures/figure.png used on input line 35.
+Package pdftex.def Info: figures/figure.png used on input line 42.
 (pdftex.def)             Requested size: 289.0767pt x 232.70676pt.
 
+[3]
 
 Package hyperref Warning: Composite letter `\textasciicaron+C'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 40.
+(hyperref)                removing `\textasciicaron' on input line 47.
 
-[3 <./figures/figure.png>]
 
-Package natbib Warning: Citation `1' on page 4 undefined on input line 53.
+Package natbib Warning: Citation `1' on page 4 undefined on input line 60.
 
 
 LaTeX Warning: Reference `fig:uk\IeC {\'a}\IeC {\v z}ka' on page 4 undefined on
- input line 58.
+ input line 65.
 
 
 LaTeX Warning: Reference `tab:tabu\IeC {\v l}ka1' on page 4 undefined on input 
-line 60.
+line 67.
 
+[4 <./figures/figure.png>]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -691,7 +692,7 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\utf8x.def"
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
 )
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 78.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 85.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -700,10 +701,10 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [4]
+
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\utf8x.def"
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
-)
+) [5]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -716,7 +717,7 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\utf8x.def"
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
 ))
-(thesis/design.tex [5]
+(thesis/design.tex [6]
 Kapitola 3.
 
 Package hyperref Warning: Composite letter `\textasciicaron+C'
@@ -728,9 +729,9 @@ Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 5.
 
-) [6
+) [7
 
-] (thesis/results.tex [7]
+] (thesis/results.tex [8]
 Kapitola 4.
 
 Package hyperref Warning: Composite letter `\textasciicaron+C'
@@ -742,11 +743,11 @@ Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 6.
 
-) [8
+) [9
 
-] (thesis/conclusions.tex [9]
+] (thesis/conclusions.tex [10]
 Kapitola 5.
-)) [10
+)) [11
 
 ]
 No file main.bbl.
@@ -777,15 +778,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
  (main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 128.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 54E1F3C76CFBE70713ED0C0EB2FFE566;1551.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 11E74D86FCBD5D8A99F976C687B7CAD1;1200
-(rerunfilecheck)             After:  15276D317BA56CE0DBBCC640E3EF449B;1458.
 
 LaTeX Warning: There were undefined references.
 
@@ -795,13 +790,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 128.
  ) 
 Here is how much of TeX's memory you used:
- 13255 strings out of 493634
- 194426 string characters out of 3141311
- 413273 words of memory out of 3000000
- 16105 multiletter control sequences out of 15000+200000
+ 13261 strings out of 493634
+ 194552 string characters out of 3141311
+ 466440 words of memory out of 3000000
+ 16109 multiletter control sequences out of 15000+200000
  77829 words of font info for 101 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 38i,8n,60p,1242b,2572s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,8n,60p,1242b,2461s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/
 MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program Files (x86)/MiKTeX 2.9/
@@ -814,9 +809,9 @@ iKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/public/lm/lmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
 lic/lm/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy
 10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtt8.pfb>
-Output written on main.pdf (27 pages, 483646 bytes).
+Output written on main.pdf (28 pages, 487453 bytes).
 PDF statistics:
- 354 PDF objects out of 1000 (max. 8388607)
- 101 named destinations out of 1000 (max. 500000)
- 23226 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 376 PDF objects out of 1000 (max. 8388607)
+ 103 named destinations out of 1000 (max. 500000)
+ 23258 words of extra memory for PDF output out of 24883 (max. 10000000)
 

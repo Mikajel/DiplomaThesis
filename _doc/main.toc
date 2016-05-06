@@ -3,18 +3,19 @@
 \contentsline {chapter}{\numberline {2}Anal\IeC {\'y}za}{2}{chapter.2}
 \contentsline {section}{\numberline {2.1}Zvolen\IeC {\'a} probl\IeC {\'e}mov\IeC {\'a} oblas\IeC {\v t}}{2}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}\IeC {\'U}bytok z\IeC {\'a}kazn\IeC {\'\i }kov}{2}{subsection.2.1.1}
-\contentsline {subsubsection}{\numberline {2.1.1.1}Reakt\IeC {\'\i }vny pr\IeC {\'\i }stup}{3}{subsubsection.2.1.1.1}
-\contentsline {subsubsection}{\numberline {2.1.1.2}Proakt\IeC {\'\i }vny pr\IeC {\'\i }stup}{3}{subsubsection.2.1.1.2}
-\contentsline {section}{\numberline {2.2}\IeC {\v C}as\IeC {\v t}}{3}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}\IeC {\v C}\IeC {\'\i }slovan\IeC {\'y} zoznam}{3}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.1.2}Moderovanie \IeC {\'u}bytku z\IeC {\'a}kazn\IeC {\'\i }kov}{3}{subsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.2.1}Reakt\IeC {\'\i }vny pr\IeC {\'\i }stup}{3}{subsubsection.2.1.2.1}
+\contentsline {subsubsection}{\numberline {2.1.2.2}Proakt\IeC {\'\i }vny pr\IeC {\'\i }stup}{3}{subsubsection.2.1.2.2}
+\contentsline {section}{\numberline {2.2}\IeC {\v C}as\IeC {\v t}}{4}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}\IeC {\v C}\IeC {\'\i }slovan\IeC {\'y} zoznam}{4}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Cit\IeC {\'a}cia}{4}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}N\IeC {\'a}vestia \& Referencie}{4}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Pr\IeC {\'\i }klady}{4}{subsection.2.2.4}
-\contentsline {chapter}{\numberline {3}Dizajn}{6}{chapter.3}
-\contentsline {section}{\numberline {3.1}\IeC {\v C}as\IeC {\v t}}{6}{section.3.1}
-\contentsline {chapter}{\numberline {4}V\IeC {\'y}sledky}{8}{chapter.4}
-\contentsline {section}{\numberline {4.1}\IeC {\v C}as\IeC {\v t}}{8}{section.4.1}
-\contentsline {chapter}{\numberline {5}Z\IeC {\'a}ver}{10}{chapter.5}
+\contentsline {subsection}{\numberline {2.2.3}N\IeC {\'a}vestia \& Referencie}{5}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Pr\IeC {\'\i }klady}{5}{subsection.2.2.4}
+\contentsline {chapter}{\numberline {3}Dizajn}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}\IeC {\v C}as\IeC {\v t}}{7}{section.3.1}
+\contentsline {chapter}{\numberline {4}V\IeC {\'y}sledky}{9}{chapter.4}
+\contentsline {section}{\numberline {4.1}\IeC {\v C}as\IeC {\v t}}{9}{section.4.1}
+\contentsline {chapter}{\numberline {5}Z\IeC {\'a}ver}{11}{chapter.5}
 \contentsline {chapter}{Literat\IeC {\'u}ra}{A-1}{chapter.5}
 \contentsline {chapter}{\numberline {A}Technick\IeC {\'a} dokument\IeC {\'a}cia}{A-1}{appendix.A}
 \contentsline {section}{\numberline {A.1}Implement\IeC {\'a}cia}{A-1}{section.A.1}
