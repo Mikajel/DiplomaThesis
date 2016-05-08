@@ -4,35 +4,116 @@
 V tejto časti sa venujeme dôkladnej analýze podkladov. Jednotlivé časti sú popísané v rozsahu relevantnom pre túto prácu. Analýza je štrukturovaná na nasledovné časti:
 
 \begin{my_itemize}
-	\item {Zvolená problémová oblasť}
+	\item {Problémová oblasť}
 	\item {Dáta sprístupnené pre prácu}
-	\item {Dostupné metódy}
+	\item {Neurónové siete}
 	\item {Výskum v danej oblasti}
 \end{my_itemize}
 
-\section{Zvolená problémová oblasť}
-\label{problemova_oblast}
+\section{Problémová oblasť}
+\label{analyza_problemova_oblast}
 
-\subsection{Úbytok zákazníkov}
-\label{ubytok_zakaznikov}
+V tejto práci sa zameriavame na predikciu úbytku zákazníkov(churn rate) pri predplatiteľských službách. V súčasnej dobe sa do popredia biznis prístupov stále viac dostávajú prístupy riadenia vzťahov zo zákazníkmi(customer relationship management). Ukazuje sa totiž, že na trhu s dostatočným pokrytím poskytovateľov cieľovej služby je niekoľkonásobne drahšie získať nového ako udržať si existujúceho zákazníka. Tento prístup však vyžaduje rozsiahlu znalosť dostupnej zákazníckej základne, ktorou poskytovateľ disponuje. \newline
 
-V tejto práci sa zameriavame na predikciu úbytku zákazníkov(churn rate) pri predplatiteľských službách. V súčasnej dobe sa do popredia biznis prístupov stále viac dostávajú prístupy riadenia vzťahov zo zákazníkmi(customer relationship management). Ukazuje sa totiž, že na trhu s dostatočným pokrytím poskytovateľov cieľovej služby je niekoľkonásobne drahšie získať si nového ako udržať si existujúceho zákazníka. Tento prístup však vyžaduje rozsiahlu znalosť dostupnej zákazníckej základne, ktorou poskytovateľ disponuje. \newline
-Predikcia úbytku zákazníkov sa venuje spracovaniu dostupných informácií o zákaznickej aktivite, službách ktoré využívajú a vývoja ich správania v čase. Výsledkom takejto analýzy je štatistika poskytujúca informácie o jednotlivých zákazníkoch a ich šanci na presun k inému poskytovateľovi. Z týchto dát je následne odvoditeľné, aké percento zákazníkov odíde ku konkurencii a aký to bude mať dopad na finančné príjmy od ktorých je poskytovateľ závislý. 
+\subsection{Predikcia úbytku zákazníkov}
+\label{analyza_ubytok_zakaznikov}
+
+Predikcia úbytku zákazníkov sa venuje spracovaniu dostupných dát o zákazníckej aktivite, službách ktoré využívajú a vývoja ich správania v čase. Takéto dáta  Výsledkom analýzy je štatistika poskytujúca informácie o jednotlivých zákazníkoch a ich šanci na presun k inému poskytovateľovi. Z týchto dát je následne odvoditeľné, aké percento zákazníkov odíde ku konkurencii a aký to bude mať dopad na finančné príjmy od ktorých je poskytovateľ závislý. 
 
 \subsection{Moderovanie úbytku zákazníkov}
+\label{analyza_moderovanie_ubytku}
 
 Vo vzťahu k úbytku zákazníkov definuje CRM dva základné prístupy, ktorými je možné moderovať úbytok. 
 
-
 \subsubsection{Reaktívny prístup}
-\label{reaktivny_pristup}
+\label{analyza_reaktivny_pristup}
 
 Motivácia zákazníka pre zotrvanie s pôvodnym poskytovateľom služby nastáva, až keď sa zákazník explicitne rozhodne pre prechod ku konkurenčnému poskytovateľovi. V tomto okamihu začína poskytovateľ na svojho zákazníka apelova výhodnými ponukami, zľavami alebo inými spôsobmi motivácie pre zotrvanie u poskytovateľa. Takýto prístup sa ukazuje ako ľahko zneužiteľný ostatnými zákazníkmi, ktorí by inak nemali motiváciu pre prechod ku konkurencii. Predikcia úbytku zákazníkov v tomto prístupe nemá nijakú významnú úlohu.
 
 \subsubsection{Proaktívny prístup}
-\label{proaktivny_pristup}
+\label{analyza_proaktivny_pristup}
 
-Pri úspešnej predikcií záujmu zákazníka o prechod ku konkurenčnému poskytovateľovi je možné efektívne jeho zámer smerovať pozitívnou motiváciou. Tentoo prístup však predpokladá vysokú úspešnosť predikčných metód. Pri nesprávnej identifikácii zákazníckeho správania je totiž možné nielen nezabrániť zákazníkom v presune ku konkurenčnému modelu, ale aj investícii finančných prostriedkov do skupiny zákazníkov, ktorá by naďalej generovala zisk aj bez významnejšej motivácie, resp. nevrátila by rozdielom v úbytku motivačné náklady, ktoré na ňu daný poskytovateľ vynaložil.
+Pri úspešnej predikcii záujmu zákazníka o prechod ku konkurenčnému poskytovateľovi je možné efektívne jeho zámer smerovať pozitívnou motiváciou. Tento prístup však predpokladá vysokú úspešnosť predikčných metód. Pri nesprávnej identifikácii zákazníckeho správania je totiž možné nielen nezabrániť zákazníkom v presune ku konkurenčnému modelu, ale aj investícii finančných prostriedkov do skupiny zákazníkov, ktorá by naďalej generovala zisk aj bez významnejšej motivácie, resp. nevrátila by rozdielom v úbytku motivačné náklady, ktoré na ňu daný poskytovateľ vynaložil.
+
+\section{Dáta sprístupnené pre prácu}
+\label{analyza_data}
+
+Pre túto prácu boli sprístupnené dáta z platobnej brány portálu pre online spravodajské denníky. Platobný portál poskytuje platformu pre periodiká, ktoré majú záujem o online funkcionalitu ale nemajú záujem implementovať vlastný platobný systém. Zákazníci tohto portálu tak získavajú rýchle riešenie pre možnosť vyhradenia exkluzívneho obsahu zo svojich online materiálov.
+
+\subsection{Exkluzívny obsah}
+\label{analyza_exkluzivny_obsah}
+
+Exkluzívny obsah je nástroj, ktorý množstvo poskytovateľov služieb využíva pri prechode na web. Umožňuje prístup k väčšiemu počtu potenciálnych zákazníkov, pričom poskytovateľovi ostáva možnosť oddeliť, čo bude prístupné každému od exkluzívneho obsahu určeného pre predplatiteľov. \newline
+Realizáciu exkluzívneho obsahu pomocou platobnej brány tretej strany umožňuje špecifikácia VAW(value added web). VAW aplikuje TINA(Telecommunications Information Networking Architecture) biznis model do klasického WWW(world wide web) prostredia.  Určuje tak vzťahy medzi jednotlivými právnymi subjektami podľa obr.~\ref{fig:vaw}. Poskytovateľ služieb(spravodajské periodikum) tak môže poskytovať nielen klasický ale aj exkluzívny obsah bez toho, aby sa vo väčšej miere muselo zaoberať správou poskytovaných služieb a finančnou administratívou. Za tú zodpovedá sprostredkovateľ(platobný portál), ktorého úloha spočíva v správe exkluzívneho obsahu vo vzťahu ku koncovému používateľovi.
+
+\begin{figure}[H]
+\begin{center}\includegraphics[scale=0.48]{vaw}\end{center}
+\caption[vaw]{Základná schéma VAW}\label{fig:vaw}
+\end{figure}
+
+\subsection{Získavanie dát}
+\label{analyza_ziskavanie_dat}
+
+Pri pokuse o prístup k exkluzívnemu obsahu stojí medzi používateľom a obsahom platobná brána portálu. Používateľovi bez predplatenej služby je zobrazená ponuka na platený prístup. Predplatitel prechádza cez bránu a je mu sprístupnený exkluzívny obsah. Pri všetkých aktivitách na portáli sú zaznamenávané používateľské údaje. Dostupné údaje sú vo forme záznamov - textových súborov priebežne generovaných používateľskou činnosťou. 
+Bežná činnosť pri analýze záznamov z činnosti a práci s velkými dátami všeobecne je predspracovanie dát. Pri sledovaní činnosti používateľov sa generujú súbory so stovkami miliónov až miliardami záznamov. V súčasnosti nie je možné klasickými prístupmi spracovať takéto objemy dát bez predspracovania - filtrovania, segmentácie a čistenia dát. Spôsob predspracovania dát je z podstatnej časti ovplyvnený metódami, ktorými chceme dáta spracovať. Pri práci so záznamami je bežné deliť dáta na tzv. používateľské prístupy (user sessions). Používateľský prístup modeluje aktivitu - jeden prístup jedného používateľa. Všeobecne platí, že ak používateľ dosiahne v činnosti pauzu 30 a viac minút, jedná sa o samostatný nový prístup. Takto rozdelené záznamy poskytujú elasticitu pri spracovaní podľa špecifického času alebo podľa používatelov. 
+
+Medzi najdôležitejšie dostupné údaje z platobného portálu patria:
+
+\begin{my_itemize}
+	\item {IP adresa}
+	\item {Používateľský účet}
+	\item {Časový rozsah prístupu}
+	\item {Prehliadaný obsah}
+	\item {Aktivácia/prerušenie predplatného}
+\end{my_itemize}
+
+\section{Neurónové siete}
+\label{analyza_neuronove_siete}
+%citovat deeplearning.org
+
+Koncept neurónových sietí vznikol v 40. rokoch minulého storočia inšpiráciou biologickými neurónovými sieťami v mozgu. Cieľom bolo prekonať bariéru medzi tým, čo je pre ľudský mozog ľahko riešitelné ale ťažko formálne definovatelné matematickými pravidlami. Tieto problémy, ktoré riešime intuitívne, pri pokuse o formálnu špecifikáciu ukazujú, aké množstvo znalostí používame v každodennom živote. Ako vhodný príklad slúži vizuálne rozoznávanie objektov, ktoré je pre osobu samozrejmé, no až v posledných rokoch zaznamenávame prvé úspechy v tejto problematike.  
+
+\subsection{Štruktúra}
+\label{analyza_struktura_nn}
+
+Podobne ako v mozgu, základ neurónovej siete tvoria neuróny a prepojenia medzi nimi. Neuróny sú organizované vo vrstvách, ktoré sa delia na 3 základné typy:
+
+\subsubsection{Vstupná vrstva}
+\label{analyza_vstupna_vrstva_nn}
+
+Reprezentuje dáta, ktoré podsúvame sieti pre interpretáciu. Dáta musia byť pred posunutím vstupnej vrstve často predspracované, aby bola sieť schopná interpretovať ich. Počet neurónov na vstupnej vrstve je ovplyvnený množstvom dát, ktoré máme na vstupe. V sieti existuje iba jediná vstupná vrstva.
+
+\subsubsection{Výstupná vrstva}
+\label{analyza_vystupna_vrstva_nn}
+Interpretácia dát neurónovou sieťou. Výstupnú vrstvu je možné nazvať ,,výsledok" siete. Jedná sa o jedinú vrstvu s obvykle jediným neurónom. 
+
+\subsubsection{Skrytá vrstva}
+\label{analyza_skryta_vrstva_nn}
+
+
+\subsection{Učenie neurónovej siete}
+\label{analyza_ucenie_nn}
+
+\subsection{Hyperparametre}
+\label{analyza_hyperparametre}
+
+
+\subsection{Pokročilé modely}
+\label{analyza_pokrocile_modely_nn}
+
+
+\section{Výskum v danej oblasti}
+\label{analyza_vyskum_danej_oblasti}
+
+
+
+
+
+
+
+
+
+
 
 
 \section{Časť}

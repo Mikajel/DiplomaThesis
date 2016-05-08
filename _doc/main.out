@@ -1,24 +1,36 @@
 \BOOKMARK [0][-]{chapter.1}{\332vod}{}% 1
 \BOOKMARK [0][-]{chapter.2}{Anal\375za}{}% 2
-\BOOKMARK [1][-]{section.2.1}{Zvolen\341 probl\351mov\341 oblast}{chapter.2}% 3
-\BOOKMARK [2][-]{subsection.2.1.1}{\332bytok z\341kazn\355kov}{section.2.1}% 4
+\BOOKMARK [1][-]{section.2.1}{Probl\351mov\341 oblast}{chapter.2}% 3
+\BOOKMARK [2][-]{subsection.2.1.1}{Predikcia \372bytku z\341kazn\355kov}{section.2.1}% 4
 \BOOKMARK [2][-]{subsection.2.1.2}{Moderovanie \372bytku z\341kazn\355kov}{section.2.1}% 5
 \BOOKMARK [3][-]{subsubsection.2.1.2.1}{Reakt\355vny pr\355stup}{subsection.2.1.2}% 6
 \BOOKMARK [3][-]{subsubsection.2.1.2.2}{Proakt\355vny pr\355stup}{subsection.2.1.2}% 7
-\BOOKMARK [1][-]{section.2.2}{Cast}{chapter.2}% 8
-\BOOKMARK [2][-]{subsection.2.2.1}{C\355slovan\375 zoznam}{section.2.2}% 9
-\BOOKMARK [2][-]{subsection.2.2.2}{Cit\341cia}{section.2.2}% 10
-\BOOKMARK [2][-]{subsection.2.2.3}{N\341vestia \046 Referencie}{section.2.2}% 11
-\BOOKMARK [2][-]{subsection.2.2.4}{Pr\355klady}{section.2.2}% 12
-\BOOKMARK [0][-]{chapter.3}{Dizajn}{}% 13
-\BOOKMARK [1][-]{section.3.1}{Cast}{chapter.3}% 14
-\BOOKMARK [0][-]{chapter.4}{V\375sledky}{}% 15
-\BOOKMARK [1][-]{section.4.1}{Cast}{chapter.4}% 16
-\BOOKMARK [0][-]{chapter.5}{Z\341ver}{}% 17
-\BOOKMARK [0][-]{chapter.5}{Literat\372ra}{}% 18
-\BOOKMARK [0][-]{appendix.A}{Technick\341 dokument\341cia}{}% 19
-\BOOKMARK [1][-]{section.A.1}{Implement\341cia}{appendix.A}% 20
-\BOOKMARK [0][-]{appendix.B}{Pou\236\355vatelsk\341 dokument\341cia}{}% 21
-\BOOKMARK [1][-]{section.B.1}{In\235tal\341cia}{appendix.B}% 22
-\BOOKMARK [2][-]{subsection.B.1.1}{Spustenie aplik\341cie}{section.B.1}% 23
-\BOOKMARK [0][-]{appendix.C}{Electronic medium}{}% 24
+\BOOKMARK [1][-]{section.2.2}{D\341ta spr\355stupnen\351 pre pr\341cu}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.1}{Exkluz\355vny obsah}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.2}{Z\355skavanie d\341t}{section.2.2}% 10
+\BOOKMARK [1][-]{section.2.3}{Neur\363nov\351 siete}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.3.1}{\227trukt\372ra}{section.2.3}% 12
+\BOOKMARK [3][-]{subsubsection.2.3.1.1}{Vstupn\341 vrstva}{subsection.2.3.1}% 13
+\BOOKMARK [3][-]{subsubsection.2.3.1.2}{V\375stupn\341 vrstva}{subsection.2.3.1}% 14
+\BOOKMARK [3][-]{subsubsection.2.3.1.3}{Skryt\341 vrstva}{subsection.2.3.1}% 15
+\BOOKMARK [2][-]{subsection.2.3.2}{Ucenie neur\363novej siete}{section.2.3}% 16
+\BOOKMARK [2][-]{subsection.2.3.3}{Hyperparametre}{section.2.3}% 17
+\BOOKMARK [2][-]{subsection.2.3.4}{Pokrocil\351 modely}{section.2.3}% 18
+\BOOKMARK [1][-]{section.2.4}{V\375skum v danej oblasti}{chapter.2}% 19
+\BOOKMARK [1][-]{section.2.5}{Cast}{chapter.2}% 20
+\BOOKMARK [2][-]{subsection.2.5.1}{C\355slovan\375 zoznam}{section.2.5}% 21
+\BOOKMARK [2][-]{subsection.2.5.2}{Cit\341cia}{section.2.5}% 22
+\BOOKMARK [2][-]{subsection.2.5.3}{N\341vestia \046 Referencie}{section.2.5}% 23
+\BOOKMARK [2][-]{subsection.2.5.4}{Pr\355klady}{section.2.5}% 24
+\BOOKMARK [0][-]{chapter.3}{Dizajn}{}% 25
+\BOOKMARK [1][-]{section.3.1}{Cast}{chapter.3}% 26
+\BOOKMARK [0][-]{chapter.4}{V\375sledky}{}% 27
+\BOOKMARK [1][-]{section.4.1}{Cast}{chapter.4}% 28
+\BOOKMARK [0][-]{chapter.5}{Z\341ver}{}% 29
+\BOOKMARK [0][-]{chapter.5}{Literat\372ra}{}% 30
+\BOOKMARK [0][-]{appendix.A}{Technick\341 dokument\341cia}{}% 31
+\BOOKMARK [1][-]{section.A.1}{Implement\341cia}{appendix.A}% 32
+\BOOKMARK [0][-]{appendix.B}{Pou\236\355vatelsk\341 dokument\341cia}{}% 33
+\BOOKMARK [1][-]{section.B.1}{In\235tal\341cia}{appendix.B}% 34
+\BOOKMARK [2][-]{subsection.B.1.1}{Spustenie aplik\341cie}{section.B.1}% 35
+\BOOKMARK [0][-]{appendix.C}{Electronic medium}{}% 36
