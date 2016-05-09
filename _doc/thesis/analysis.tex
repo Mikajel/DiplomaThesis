@@ -28,7 +28,7 @@ Vo vzťahu k úbytku zákazníkov definuje CRM dva základné prístupy, ktorým
 \subsubsection{Reaktívny prístup}
 \label{analyza_reaktivny_pristup}
 
-Motivácia zákazníka pre zotrvanie s pôvodnym poskytovateľom služby nastáva, až keď sa zákazník explicitne rozhodne pre prechod ku konkurenčnému poskytovateľovi. V tomto okamihu začína poskytovateľ na svojho zákazníka apelova výhodnými ponukami, zľavami alebo inými spôsobmi motivácie pre zotrvanie u poskytovateľa. Takýto prístup sa ukazuje ako ľahko zneužiteľný ostatnými zákazníkmi, ktorí by inak nemali motiváciu pre prechod ku konkurencii. Predikcia úbytku zákazníkov v tomto prístupe nemá nijakú významnú úlohu.
+Motivácia zákazníka pre zotrvanie s pôvodným poskytovateľom služby nastáva, až keď sa zákazník explicitne rozhodne pre prechod ku konkurenčnému poskytovateľovi. V tomto okamihu začína poskytovateľ na svojho zákazníka apelovať výhodnými ponukami, zľavami alebo inými spôsobmi motivácie pre zotrvanie u poskytovateľa. Takýto prístup sa ukazuje ako ľahko zneužiteľný ostatnými zákazníkmi, ktorí by inak nemali motiváciu pre prechod ku konkurencii. Predikcia úbytku zákazníkov v tomto prístupe nemá nijakú významnú úlohu.
 
 \subsubsection{Proaktívny prístup}
 \label{analyza_proaktivny_pristup}
@@ -76,31 +76,75 @@ Koncept neurónových sietí vznikol v 40. rokoch minulého storočia inšpirác
 \subsection{Štruktúra}
 \label{analyza_struktura_nn}
 
-Podobne ako v mozgu, základ neurónovej siete tvoria neuróny a prepojenia medzi nimi. Neuróny sú organizované vo vrstvách, ktoré sa delia na 3 základné typy:
+Podobne ako v mozgu, základ neurónovej siete tvoria neuróny a prepojenia medzi nimi. Neuróny sú organizované vo vrstvách, ktoré sa delia na 3 základné typy. 
+%\newline
+\noindent
 
-\subsubsection{Vstupná vrstva}
-\label{analyza_vstupna_vrstva_nn}
+\textbf{Vstupná vrstva} - reprezentuje dáta, ktoré podsúvame sieti pre interpretáciu. Dáta musia byť pred posunutím vstupnej vrstve často predspracované, aby bola sieť schopná interpretovať ich. Počet neurónov na vstupnej vrstve je ovplyvnený množstvom dát, ktoré máme na vstupe. V sieti existuje iba jediná vstupná vrstva.
+%\newline
+\noindent
 
-Reprezentuje dáta, ktoré podsúvame sieti pre interpretáciu. Dáta musia byť pred posunutím vstupnej vrstve často predspracované, aby bola sieť schopná interpretovať ich. Počet neurónov na vstupnej vrstve je ovplyvnený množstvom dát, ktoré máme na vstupe. V sieti existuje iba jediná vstupná vrstva.
+\textbf{Výstupná vrstva} - interpretácia dát neurónovou sieťou. Výstupnú vrstvu je možné nazvať ,,výsledok"  siete. Jedná sa o jedinú vrstvu s obvykle jediným neurónom.  
+%\newline
+\noindent
 
-\subsubsection{Výstupná vrstva}
-\label{analyza_vystupna_vrstva_nn}
-Interpretácia dát neurónovou sieťou. Výstupnú vrstvu je možné nazvať ,,výsledok" siete. Jedná sa o jedinú vrstvu s obvykle jediným neurónom. 
+\textbf{Skrytá vrstva} - nachádzajú sa medzi vstupnou a výstupnou vrstvou. Ich počet určuje dĺžku modelu. Sieť nemusí mať ani jednu skrytú vrstvu, no takáto sieť dokáže modelovať iba lineárnu závislosť. Všeobecne platí, že čím viac skrytých vrstiev má sieť, tým zložitejšie vzťahy dokáže simulovať. Zvyšujú sa však aj nároky na učenie a výpočtové nároky. Jediná skrytá vrstva vytvára pozoruhodný rozdiel v aplikovatelnosti modelu, keďže prekonáva hranicu lineárnej závislosti funkcie, ktorú model pokrýva. Pri vysokej zložitosti modelu je možné naraziť na problém preučenia, ktorý bráni sieti korektne generalizovať. Neexistuje nijaký spoľahlivá metóda pre správny počet alebo veľkosť skrytých vrstiev. Empiricky sa vyvinulo niekoľko odhadov, ale v praxi je nutné overovať správnosť modelu praktickou evaluáciou. Odhadové pravidlá najčastejšie padajú na neschopnosti integrovať vo svojom rozhodnutí komplexitu úlohy a redundanciu v tréningových dátach.
+%\newline
+\noindent
 
-\subsubsection{Skrytá vrstva}
-\label{analyza_skryta_vrstva_nn}
+\textbf{Prepojenia} - Váhované prepojenia medzi neurónmi fungujú ako pamäť neurónovej siete. V jednoduchom modeli neurónovej siete sú prepojenia iba medzi neurónmi navzájom susediacich vrstiev. Prepojenie existuje medzi každým neurónom \textit{n}-tej do \textit{n+1} vrstvy. Neuróny jednej vrstvy pritom medzi sebou nie sú prepojené. Signál sa šíri týmito prepojeniami od vstupnej vrstvy smerom k výstupnej vrstve v jednom smere, ako je to ilustrované na obr.~\ref{fig:fnn}. Takéto siete sa volajú \textit{dopredné}. Hlavný účel prepojenia je niesť váhu. Váha prepojenia určuje, aký významný je vzťah medzi dvomi danými neurónmi, ktoré spája. Korektná váha daného prepojenia je na začiatku neznáma, jej korektné nastavenie je výsledkom procesu učenia.
+%\newline
+\noindent
 
+\textbf{Neurón} - predstavuje základnú stavebnú jednotku neurónovej siete. Skladá sa z \textit{aktivačnej funkcie} a \textit{prahovej hodnoty}. Prahová hodnota neurónu je pripočítaná k sume vstupných váhovaných hodnôt. Na výsledok sa následne aplikuje aktivačná funkcia. Takýto výstup je následne prepojeniami posielaný do ďaľších neurónov. Špeciálny prípad je neurón vstupnej a výstupnej vrstvy. Na vstupe totiž neurón hodnotu iba posiela ďalej a na výstupe po spracovaní nie je zasielaná nikam - predstavuje výsledok siete.
+%\newline
+\noindent
+
+
+%citovat a tutorial on training reccurent NN z mendeleya
+\begin{figure}[H]
+\begin{center}\includegraphics[scale=0.64]{fnn}\end{center}
+\caption[fnn]{Štruktúra doprednej neurónovej siete}\label{fig:fnn}
+\end{figure}
 
 \subsection{Učenie neurónovej siete}
 \label{analyza_ucenie_nn}
 
+Učenie predstavuje kľúčovú aktivitou pre schopnosť siete produkovať požadované výsledky. Spočíva vo vystavovaní neurónovej siete tréningovým dátam, ktoré sa sieť snaží interpretovať.
+
+ %semi-supervidsed learning, active learning, reinforced learning
+\textbf{Učenie s učiteľom} je metóda, pri ktorej je dostupná sada tréningových dát ,,označená". Pri interpretovaní výsledku je možné okamžite určiť, aká chyba nastala a následne ju propagovať do siete. Na toto sa využíva tzv. \textit{spätná propagácia}, ktorá upravuje váhy siete v rozsahu chyby, ktorá nastala - rozdiel medzi správnym výsledkom pre daný vstup a samotným výsledkom siete.
+\noindent
+
+\textbf{Učenie bez učiteľa} predstavuje alternatívnu metódu, pri ktorej tréningové dáta nemajú dostupné výsledky. Neurónová sieť sa sama učí rozhodnúť, čo je pre ňu relevantné. Učenie bez učiteľa predstavuje možnosť ako získať takmer neobmedzené množstvá tréningových dát tam, kde učenie s učiteľom vyžaduje manuálne a kvôli časovej náročnosti nedostupné označovanie.
+\noindent
+
+%deeplearning.org
 \subsection{Hyperparametre}
 \label{analyza_hyperparametre}
 
+Nastavenia, pomocou ktorých kontrolujeme správanie neurónových sietí sa nazývajú \textit{hyperparametre}. Tieto hodnoty nie sú získané učením siete pokiaľ nemodelujeme vnorený systém za týmto účelom. Príkladom hyperparametra je počet skrytých vrstiev neurónovej siete. Pri nízkom počte nebude model schopný naučiť sa funkciu definovanú problémom. Pri vysokom počte je možné, že sieť v sebe uloží menší tréningový dataset, nazývané tiež ako problém \textit{preučenia}. Pri preučení sieť nezíska schopnosť generalizácie problému kvôli sledovaniu tréningového datasetu. Je zjavné, že zvolenie správnych hyperparametrov má pre výsledky metódy kľúčovú úlohu. Medzi ďaľšie významné hyperparametre patria:
+\begin{my_itemize}
+	\item {Šírka jednotlivých vrstiev}
+	\item {Rýchlosť učenia}
+	\item {Momentum}
+	\item {Aktivačné funkcie neurónov}
+\end{my_itemize}
 
-\subsection{Pokročilé modely}
+
+%citovat a tutorial on training reccurent NN z mendeleya a deeplearning org
+\subsection{Rekurentné neurónové siete}
 \label{analyza_pokrocile_modely_nn}
 
+Do popredia výskumu sa v súčasnosti dostávajú pokročilé modely, ktoré už nie sú obmedzené na jednoduchý dopredný prístup. Vďaka rapídnemu zvyšovaniu výkonu grafických kariet sa čoraz častejšie aplikujú rekurentné modely neurónových sietí. Špecializáciou rekurentných sietí je práca so sekvenčnými dátami. Tieto siete predstavujú generalizáciu dopredných modelov ich rozšírením o cyklické prepojenia. Takýmto spôsobom je možné využiť súčasnú hodnotu premennej na ovplyvnenie vlastnej hodnoty v budúcnosti. Cyklický charakter rekurentného modelu je zobrazený na obr.~\ref{fig:rnn}.
+
+\subsubsection{LSTM siete}
+
+%citovat a tutorial on training reccurent NN z mendeleya
+\begin{figure}[H]
+\begin{center}\includegraphics[scale=0.64]{rnn}\end{center}
+\caption[rnn]{Štruktúra rekurentnej neurónovej siete}\label{fig:rnn}
+\end{figure}
 
 \section{Výskum v danej oblasti}
 \label{analyza_vyskum_danej_oblasti}
@@ -115,7 +159,7 @@ Interpretácia dát neurónovou sieťou. Výstupnú vrstvu je možné nazvať ,,
 
 
 
-
+\begin{comment}
 \section{Časť}
 \label{sec:Časť}
 V tejto časti sa venujeme 
@@ -224,3 +268,5 @@ int a;
     \caption{Information about users}
     \label{tab:table1}
 \end{table}
+
+\end{comment}
