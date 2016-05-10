@@ -138,26 +138,40 @@ Nastavenia, pomocou ktorých kontrolujeme správanie neurónových sietí sa naz
 
 Do popredia výskumu sa v súčasnosti dostávajú pokročilé modely, ktoré už nie sú obmedzené na jednoduchý dopredný prístup. Vďaka rapídnemu zvyšovaniu výkonu grafických kariet sa čoraz častejšie aplikujú rekurentné modely neurónových sietí. Špecializáciou rekurentných sietí je práca so sekvenčnými dátami. Tieto siete predstavujú generalizáciu dopredných modelov ich rozšírením o cyklické prepojenia. Takýmto spôsobom je možné využiť súčasnú hodnotu premennej na ovplyvnenie vlastnej hodnoty v budúcnosti. Cyklický charakter rekurentného modelu je zobrazený na obr.~\ref{fig:rnn}.
 
-\subsubsection{LSTM siete}
-
 %citovat a tutorial on training reccurent NN z mendeleya
 \begin{figure}[H]
 \begin{center}\includegraphics[scale=0.64]{rnn}\end{center}
 \caption[rnn]{Štruktúra rekurentnej neurónovej siete}\label{fig:rnn}
 \end{figure}
 
+\subsection{Siete s dlhou krátkodobou pamäťou - LSTM}
+
+%perfektne zdroje k LSTM aj odkazy v deeplearning.org pdf
+LSTM predstavuje vylepšený model klasickej RNN. Vnútorná štruktúra ako doplnok ku externej rekurencii medzi jednotlivými neurónmi obsahuje aj \textit{internú rekurenciu}, zobrazenú v štruktúre LSTM neurónu na obr.~\ref{fig:lstm}. Medzi najdôležitejšie súčasti tohto modelu patria sigmoidné brány, ktoré rozhodujú o tom, ako sa signál bude širiť.
+\newline
+\textbf{Brána zabudnutia} ovplyvňuje, či nastáva vnútorná rekurencia neurónu. Stav tak môže ale nemusí byť faktorom ovplyvňujúcim nasledujúcu iteráciu výpočtu v sieti. Významné zlepšenie v LSTM sieťach prišlo s myšlienkou \textit{kontextom podmieneného zabúdania}. Takýto model sa ukazuje extrémne výhodným pri riešení problémov zahŕňajúcich \textit{časové pauzy(lags)}.
+%citovat "Learning precise timing with LSTM"
+ Dôležitý prvok  na obr.~\ref{fig:lstm} predstavuje čierna kocka. Označuje pauzu o veľkosti jednej iterácie. Hodnota signálu tak ovplyvňuje nasledujúcu iteráciu, tj. vplýva na neskoršie udalosti.
+\newline
+\noindent
+
+LSTM siete v praxi dokázali svoje schopnosti pri aplikácií na rôzne netriviálne dátové problémy. Pozornosť je kladená na frekventovanú časovú závislosť v dátach:
+%deeplearning LSTM ma odkazy na konkretne projekty
+\begin{my_itemize}
+	\item{Rozoznávanie rukopisu}
+	\item{Generovanie rukopisu}
+	\item{Rozoznávanie reči}
+	\item{Označovanie obrázkov}
+\end{my_itemize}
+
+%deeplearning org
+\begin{figure}[H]
+\begin{center}\includegraphics[scale=0.64]{lstm}\end{center}
+\caption[lstm]{Štruktúra LSTM bunky}\label{fig:lstm}
+\end{figure}
+
 \section{Výskum v danej oblasti}
 \label{analyza_vyskum_danej_oblasti}
-
-
-
-
-
-
-
-
-
-
 
 \begin{comment}
 \section{Časť}

@@ -11,8 +11,9 @@
 \BOOKMARK [2][-]{subsection.1.3.1}{\227trukt\372ra}{section.1.3}% 11
 \BOOKMARK [2][-]{subsection.1.3.2}{Ucenie neur\363novej siete}{section.1.3}% 12
 \BOOKMARK [2][-]{subsection.1.3.3}{Hyperparametre}{section.1.3}% 13
-\BOOKMARK [2][-]{subsection.1.3.4}{Pokrocil\351 modely}{section.1.3}% 14
-\BOOKMARK [1][-]{section.1.4}{V\375skum v danej oblasti}{chapter.1}% 15
-\BOOKMARK [0][-]{chapter.2}{Dizajn}{}% 16
-\BOOKMARK [1][-]{section.2.1}{Cast}{chapter.2}% 17
-\BOOKMARK [0][-]{chapter.3}{Z\341ver}{}% 18
+\BOOKMARK [2][-]{subsection.1.3.4}{Rekurentn\351 neur\363nov\351 siete}{section.1.3}% 14
+\BOOKMARK [2][-]{subsection.1.3.5}{Siete s dlhou kr\341tkodobou pam\344tou - LSTM}{section.1.3}% 15
+\BOOKMARK [1][-]{section.1.4}{V\375skum v danej oblasti}{chapter.1}% 16
+\BOOKMARK [0][-]{chapter.2}{Dizajn}{}% 17
+\BOOKMARK [1][-]{section.2.1}{Cast}{chapter.2}% 18
+\BOOKMARK [0][-]{chapter.3}{Z\341ver}{}% 19
