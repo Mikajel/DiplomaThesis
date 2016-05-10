@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.11)  10 MAY 2016 01:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.11)  10 MAY 2016 22:28
 entering extended mode
 **./main.tex
 (main.tex
@@ -534,40 +534,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
-) (template/anotation.tex [2
+[1
 
 {C:/Users/Michal/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 29.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 125.
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )<<ot1.cmap>>
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 29.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 125.
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )<<oml.cmap>>
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 29.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 125
+.
 
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )<<oms.cmap>>
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 29.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 125
+.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 29.
+(Font)              <12> on input line 125.
 <<omx.cmap>>
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 29.
+(Font)              <8> on input line 125.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 29.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 29.
+(Font)              <6> on input line 125.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 125.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-(thesis/anotation-Slovak.tex) [3]
+))
+(template/anotation.tex [2] (thesis/anotation-Slovak.tex) [3]
 Underfull \hbox (badness 10000) in paragraph at lines 47--62
 
  []
@@ -579,15 +585,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--62
  [5
 
 ] (thesis.tex
-(thesis/analysis.tex
+(thesis/introduction.tex
 Kapitola 1.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 7.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 14.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 7.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 14.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15 \item \textbf
+                  {FNN} - Dopredn√° neur√≥nov√° sie≈• (Feedforward Neural Ne...
+[1
 
+
+]) (thesis/analysis.tex [2]
+Kapitola 2.
 
 Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
@@ -598,10 +614,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
-[1
+[3
 
-
-] [2]
+] [4]
 Overfull \hbox (22.60435pt too wide) in paragraph at lines 46--48
 \T1/lmr/m/n/12 (-20) ¨uje ≤pe-ci-fi-k·-cia VAW(value ad-ded web). VAW ap-li-kuj
 e TINA(Telecommunications
@@ -613,55 +628,72 @@ Overfull \hbox (2.2651pt too wide) in paragraph at lines 46--48
 l do kla-sic-kÈho WWW(world
  []
 
-<figures/vaw.png, id=134, 627.09282pt x 338.76563pt>
+<figures/vaw.png, id=156, 627.09282pt x 338.76563pt>
 File: figures/vaw.png Graphic file (type png)
  <use figures/vaw.png>
 Package pdftex.def Info: figures/vaw.png used on input line 50.
 (pdftex.def)             Requested size: 301.00113pt x 162.60564pt.
 
-[3] [4 <./figures/vaw.png>] [5]
-<figures/fnn.png, id=154, 472.01344pt x 284.56313pt>
+[5] [6 <./figures/vaw.png>] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 98--102
+
+ []
+
+<figures/neuronoutput.png, id=176, 241.90375pt x 56.21pt>
+File: figures/neuronoutput.png Graphic file (type png)
+
+<use figures/neuronoutput.png>
+Package pdftex.def Info: figures/neuronoutput.png used on input line 109.
+(pdftex.def)             Requested size: 154.81786pt x 35.97426pt.
+ [8]
+<figures/fnn.png, id=188, 472.01344pt x 284.56313pt>
 File: figures/fnn.png Graphic file (type png)
  <use figures/fnn.png>
-Package pdftex.def Info: figures/fnn.png used on input line 106.
+Package pdftex.def Info: figures/fnn.png used on input line 119.
 (pdftex.def)             Requested size: 302.08757pt x 182.11977pt.
 
-[6]
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 110.
+(hyperref)                removing `\textasciicaron' on input line 123.
 
-[7 <./figures/fnn.png>] <figures/rnn.png, id=167, 507.39563pt x 284.56313pt>
+[9 <./figures/neuronoutput.png> <./figures/fnn.png>]
+<figures/rnn.png, id=196, 507.39563pt x 284.56313pt>
 File: figures/rnn.png Graphic file (type png)
-
-<use figures/rnn.png>
-Package pdftex.def Info: figures/rnn.png used on input line 143.
+ <use figures/rnn.png>
+Package pdftex.def Info: figures/rnn.png used on input line 156.
 (pdftex.def)             Requested size: 324.7321pt x 182.11977pt.
- [8]
+
+[10]
 
 Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 147.
+(hyperref)                removing `\textasciicaron' on input line 160.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 150--157
-
- []
-
-[9 <./figures/rnn.png>] <figures/lstm.png, id=182, 660.21657pt x 563.10374pt>
+[11 <./figures/rnn.png>] <figures/lstm.png, id=211, 660.21657pt x 563.10374pt>
 File: figures/lstm.png Graphic file (type png)
 
 <use figures/lstm.png>
-Package pdftex.def Info: figures/lstm.png used on input line 169.
+Package pdftex.def Info: figures/lstm.png used on input line 186.
 (pdftex.def)             Requested size: 422.53716pt x 360.38516pt.
 
-Overfull \hbox (32.53716pt too wide) in paragraph at lines 169--169
+Overfull \hbox (32.53716pt too wide) in paragraph at lines 186--186
  [] 
  []
 
-) (thesis/design.tex [10 <./figures/lstm.png>]
-Kapitola 2.
+<figures/peepholes.png, id=212, 910.90312pt x 465.23813pt>
+File: figures/peepholes.png Graphic file (type png)
+
+<use figures/peepholes.png>
+Package pdftex.def Info: figures/peepholes.png used on input line 192.
+(pdftex.def)             Requested size: 455.45044pt x 232.61848pt.
+
+Overfull \hbox (65.45044pt too wide) in paragraph at lines 192--192
+ [] 
+ []
+
+[12 <./figures/lstm.png>]) (thesis/design.tex [13 <./figures/peepholes.png>]
+Kapitola 3.
 
 Package hyperref Warning: Composite letter `\textasciicaron+C'
 (hyperref)                not defined in PD1 encoding,
@@ -672,11 +704,11 @@ Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 5.
 
-) [11
+) [14
 
-] (thesis/conclusions.tex [12]
-Kapitola 3.
-)) [13
+] (thesis/conclusions.tex [15]
+Kapitola 4.
+)) [16
 
 ]
 No file main.bbl.
@@ -686,28 +718,32 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 131.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 131.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 131.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0D4E6239FB83D3D5E99CF3B3DE06E1F9;1399.
+(rerunfilecheck)             Checksum: CA31B575744E37919BB74BFA62C1FBDC;1512.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 131.
  ) 
 Here is how much of TeX's memory you used:
- 12281 strings out of 493634
- 182719 string characters out of 3141311
- 308573 words of memory out of 3000000
- 15246 multiletter control sequences out of 15000+200000
+ 12306 strings out of 493634
+ 183164 string characters out of 3141311
+ 308694 words of memory out of 3000000
+ 15259 multiletter control sequences out of 15000+200000
  56890 words of font info for 94 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  38i,8n,43p,1221b,586s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/
-fonts/type1/public/lm/lmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-public/lm/lmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lm
-r17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (17 pages, 465395 bytes).
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/
+MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files (x86)/MiKTeX 2.9/font
+s/enc/dvips/lm/lm-mathsy.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
+lic/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi
+12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/lm/lmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+lm/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri12.p
+fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
+Output written on main.pdf (21 pages, 589983 bytes).
 PDF statistics:
- 237 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
- 16577 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 287 PDF objects out of 1000 (max. 8388607)
+ 49 named destinations out of 1000 (max. 500000)
+ 16603 words of extra memory for PDF output out of 17280 (max. 10000000)
 
