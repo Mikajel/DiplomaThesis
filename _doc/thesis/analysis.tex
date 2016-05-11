@@ -218,10 +218,10 @@ Dataset zákazníkov obsahuje nasledovné informácie o zákazníkoch:
 
 Evidovaní zákazníci, ktorí opustili spoločnosť tvoria 15\% z datasetu. Pri využití metód bola vyhradená časť dát(60\%) pre kalibráciu a časť(40\%) pre testovanie úspešnosti. Stratifikácia bola aplikovaná kvôli udržaniu pomeru 15\% odchádzajúcich zákazníkov pre obe časti. %citovat  z clanku odkaz 
 
-\subsubsection{Markovov model}
+\subsubsection{Markovove reťazce}
 \label{markov_markov}
 
-Markovov model je pravdepodobnostná technika pre reprezentáciu korelácie medzi za sebou idúcimi pozorovaniami. Táto štúdia poukazuje na vplyv sekvencie v odoberanom type produktu na predpoveď, viď. tabuľku ~\ref{fig:producttable}. Kvôli tomuto javu boli využité Markovove modely. V minulosti boli úspešne aplikované na predikciu predaja finančných služieb, online predajov alebo na predpoveď úspešnosti softvéru.
+Markovove reťazce sú pravdepodobnostná technika pre reprezentáciu korelácie medzi za sebou idúcimi pozorovaniami. Táto štúdia poukazuje na vplyv sekvencie v odoberanom type produktu na predpoveď, viď. tabuľku ~\ref{fig:producttable}. Kvôli tomuto javu boli využité Markovove reťazce. V minulosti boli úspešne aplikované na predikciu predaja finančných služieb, online predajov alebo na predpoveď úspešnosti softvéru.
 %zdroj na obrazok aj minule aplikacie
 \begin{figure}[H]
 \begin{center}
@@ -246,6 +246,35 @@ Kvôli svojej jednoduchosti použitia a interpretácie a schopnosti práce s uka
 \caption[lift]{Výsledky použitých metód pre dané \% najohrozenejších zákazníkov}\label{fig:lift}
 \end{figure}
 
+\subsection{Neurónová sieť}
+\label{metoda_neuronova_siet}
+
+Neurónová sieť bola využitá pri štúdii zaoberajúcej sa predikciou úbytku zákazníkov u mobilného operátora. Zdanlivo jednoduchý model využívajúci učenie s učiteľom priniesol prekvapivo dobré výsledky pre verejne dostupný dataset.%odkaz na tuto studiu
+
+\subsubsection{Dataset}
+\label{nn_dataset}
+
+Záznamy 20 rôznych premenných od 2427 zákazníkov obsahujú okrem samotnej informácie o úbytku nasledovné informácie:
+\newline
+štát, doba aktívnosti účtu, kód oblasti, telefónne číslo, medzinárodný plán (áno/nie), služba hlasového záznamu, počet hlasových záznamov, prevolané minúty (deň/večer/noc), počet hovorov(deň/večer/noc), (deň/večer/noc) platba, medzinárodné služby, počet volaní na zákaznícku linku.
+
+\subsubsection{Neurónová sieť}
+\label{metoda_nn}
+
+Táto štúdia pracuje s klasickým modelom FNN pri predikcii. Ako prevencia problému preučenia funguje vyberanie náhodných záznamov do tréningového datasetu. Zbytok dát je využitých pre evaluáciu schopností siete predikovať úbytok.
+
+Výsledná úspešnosť siete dosahuje 92,35\%. Architektúra tejto siete využíva jeden neurón pre každý vstup na prvej vrstve. Informácie o čísle a štáte neboli zahrnuté, lebo plnili iba identifikačnú funkciu. Po rozsiahlejších experimentoch so skrytými vrstvami sa ako najlepšie riešenie ukazuje využitie jedinej skrytej vrstvy s 3 neurónmi. Na výstupe neurónová sieť poskytuje informáciu o prechode(áno/nie) ale aj istotu, s ktorou tento výsledok určila. 
+\newline
+Na obr.~\ref{fig:importance} je tiež vidno, ako boli vyhodnotené jednotlivé vstupné parametre z hľadiska dôležitosti. Tá je určená na intervale $<0; 1>$, pričom však zriedka prekročí $0,35$. Ako sa ukázalo, najdôležitejším indikátorom prechodu zákazníka je počet volaní na zákaznícku podporu a množstvo medzinárodných služieb.
+
+%zdroj na obrazok
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.50]{importance}\end{center}
+\caption[importance]{Vplyv parametrov na stratu zákazníka}\label{fig:importance}
+\end{figure}
+
+Tento model správne predikuje až 97\% ostávajúcich zákazníkov. Správne však určí iba 66\% strácaných zákazníkov. Evaluácia tohto výsledku je teda ťažko interpretovatelná hodnotou 92\%. 
 
 
 
