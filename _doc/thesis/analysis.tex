@@ -162,14 +162,14 @@ Do popredia výskumu sa v súčasnosti dostávajú pokročilé modely, ktoré u�
 %perfektne zdroje k LSTM aj odkazy v deeplearning.org pdf
 LSTM predstavuje vylepšený model RNN. Vnútorná štruktúra ako doplnok ku externej rekurencii medzi jednotlivými neurónmi obsahuje aj \textit{internú rekurenciu}, zobrazenú v štruktúre LSTM neurónu na obr.~\ref{fig:lstm}. Medzi najdôležitejšie súčasti tohto modelu patria sigmoidné brány, ktoré rozhodujú o tom, ako sa signál bude širiť. LSTM tak prekonáva problém strácajúceho sa gradientu, ktorým trpí klasická RNN architektúra.
 \newline
-\textbf{Brána zabudnutia} ovplyvňuje, či nastáva vnútorná rekurencia neurónu. Stav tak môže ale nemusí byť faktorom ovplyvňujúcim nasledujúcu iteráciu výpočtu v sieti. Významné zlepšenie v LSTM sieťach prišlo s myšlienkou \textit{kontextom podmieneného zabúdania}. Takýto model sa ukazuje extrémne výhodným pri riešení problémov zahŕňajúcich \textit{časové pauzy(lags)}.
+\textbf{Brána zabudnutia} ovplyvňuje, či nastáva vnútorná rekurencia neurónu. Stav tak môže ale nemusí byť faktorom ovplyvňujúcim nasledujúcu iteráciu výpočtu v sieti. Významné zlepšenie v LSTM sieťach prišlo s myšlienkou \textit{kontextom podmieneného zabúdania}. Takýto model sa ukazuje extrémne výhodným pri riešení problémov zahŕňajúcich \textit{časové pauzy}(lags).
 %citovat "Learning precise timing with LSTM"
  Dôležitý prvok  na obr.~\ref{fig:lstm} predstavuje čierna kocka. Označuje pauzu o veľkosti jednej iterácie. Hodnota signálu tak ovplyvňuje nasledujúcu iteráciu, tj. vplýva na neskoršie udalosti.
 \newline
 \noindent
 %citovat "Learning precise timing with LSTM"
 %ako do riti mam prelozit peepholes? 
-\textbf{Nazeracie diery} predstavujú vylepšenie LSTM. Rieši problémy, ktoré vznikajú na základe faktu, že brána nedostáva priame informácie o stave jadra LSTM bloku(CEC). Táto situácia nastáva, keď je výstupná brána zatvorená. \textit{Nazeranie} predstavuje techniku váhovaného prepojenia CEC s bránami bloku daného jadra. Prepojenia sú štandardné s výnimkou časovej pauzy. Schéma nazerania v LSTM bloku je zobrazená na obr.~\ref{fig:peepholes}.
+\textbf{Nazeracie diery}(peepholes) predstavujú vylepšenie LSTM. Rieši problémy, ktoré vznikajú na základe faktu, že brána nedostáva priame informácie o stave jadra LSTM bloku(CEC). Táto situácia nastáva, keď je výstupná brána zatvorená. \textit{Nazeranie} predstavuje techniku váhovaného prepojenia CEC s bránami bloku daného jadra. Prepojenia sú štandardné s výnimkou časovej pauzy. Schéma nazerania v LSTM bloku je zobrazená na obr.~\ref{fig:peepholes}.
 
 LSTM siete v praxi dokázali svoje schopnosti pri aplikácií na rôzne netriviálne dátové problémy. Pozornosť je kladená na frekventovanú časovú závislosť v dátach:
 %deeplearning LSTM ma odkazy na konkretne projekty
@@ -195,6 +195,59 @@ LSTM siete v praxi dokázali svoje schopnosti pri aplikácií na rôzne netrivi�
 
 \section{Výskum v danej oblasti}
 \label{analyza_vyskum_danej_oblasti}
+
+V tejto časti sa zaoberáme štúdiou dostupných riešení pre problém úbytku zákazníkov. Zameriavame sa na metódy strojového učenia. Analýza poskytuje náhľad do konkrétneho biznis odvetvia, v ktorom bol skúmaný úbytok zákazníkov pre lepšie pochopenie stratégie, s ktorou bolo spracovanie dát a použité metódy optimalizované.
+
+\subsection{Markovove reťazce, náhodné lesy}
+
+Štúdia aplikuje štatistické modely, medzi nimi najúspešnejšie \textit{Markovove reťazce} a \textit{náhodné lesy} pri predikcii úbytku zákazníkov spoločnosti poskytujúcej káblovú televíziu. Skúmaná spoločnosť v minulosti rýchlo získala veľký podiel zákazníkov na trhu, o ktorý začala stabilne počas rokov prichádzať. Táto spoločnosť za použitia metód na predpovedanie úbytku zákazníkov dokázala takmer zdvojnásobiť svoje zisky zameriavaním sa na pozitívnu motiváciu najrizikovejších zákazníkov.
+\newline
+Spoločnosť ponúka stabilné ročné predplatné bez možnosti prerušenia zmluvy. Nahlasovanie plánovaného nepredlžovania zmluvy je povinné v poslednom mesiaci zmluvy, pričom neohlásenie automaticky predlžuje zmluvu na ďaľší rok. V štúdii boli sledovaní zákazníci, ktorí mali aktívnu zmluvu vo \textit{vzorkovacom dátume}(28. 2. 2002) a neboli vylúčení kvôli neplateniu predplatného. 
+\newline
+\subsubsection{Dataset}
+\label{markov_dataset}
+Dataset zákazníkov obsahuje nasledovné informácie o zákazníkoch:
+
+\begin{my_itemize}
+	\item{Zmluvné} - počet mesiacov trvania predplatného, mesiac ukončenia, typ produktu, špeciálne balíčky(šport, filmové, ...), spôsob platby
+	\item{Socio-demografické} - vek, pohlavie, región, biznis
+	\item{Finančné} - upomienky, typ upomienok, čas od poslednej upomienky
+	\item{Historické} - počet obnov predplatného, získané zľavy 
+\end{my_itemize}
+
+
+Evidovaní zákazníci, ktorí opustili spoločnosť tvoria 15\% z datasetu. Pri využití metód bola vyhradená časť dát(60\%) pre kalibráciu a časť(40\%) pre testovanie úspešnosti. Stratifikácia bola aplikovaná kvôli udržaniu pomeru 15\% odchádzajúcich zákazníkov pre obe časti. %citovat  z clanku odkaz 
+
+\subsubsection{Markovov model}
+\label{markov_markov}
+
+Markovov model je pravdepodobnostná technika pre reprezentáciu korelácie medzi za sebou idúcimi pozorovaniami. Táto štúdia poukazuje na vplyv sekvencie v odoberanom type produktu na predpoveď, viď. tabuľku ~\ref{fig:producttable}. Kvôli tomuto javu boli využité Markovove modely. V minulosti boli úspešne aplikované na predikciu predaja finančných služieb, online predajov alebo na predpoveď úspešnosti softvéru.
+%zdroj na obrazok aj minule aplikacie
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.50]{producttable}\end{center}
+\caption[producttable]{Sekvencia typu odoberanej služby dvoch zákazníkov}\label{fig:producttable}
+\end{figure}
+
+\subsubsection{Náhodné lesy}
+\label{markov_lesy}
+
+Kvôli svojej jednoduchosti použitia a interpretácie a schopnosti práce s ukazateľmi na rôznych úrovniach merania sa stali rozhodovacie stromy populárnou metódou predikcie. Ich nevýhody(ako napr. nedostatok robustnosti) úspešne rieši vytváranie veľkého počtu stromov so samostatným hlasovaním - lesov. Tento experiment využil náhodné lesy podľa štúdie L. Breimana. %Zdroj na Breimana
+
+\subsubsection{Evaluácia}
+\label{markov_evaluacia}
+
+Štúdia pri evaluácii využíva počítanie zdvihu - pomeru zákazníkov predikovaných ako náchylných k prechodu a z nich zákazníkov, ktorí prešli inam, relatívne k percentu všetkých ušlých zákazníkov. Vysoký zdvih teda indikuje úspešný model. Pri 15,13\% úbytku zákazníkov teda perfektná predpoveď predstavuje $100/15,13 = 6,61$ zdvih. Na grafe~\ref{fig:lift} je možné vidieť úspešnosť jednotlivých metód pri vybratí daného percenta najohrozenejších zákazníkov. Vidno tu úspešnosť náhodných lesov aj takmer nulové zlepšenie logistickej regresie Markovovými reťazcami.
+
+%zdroj na obrazok
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.50]{lift}\end{center}
+\caption[lift]{Výsledky použitých metód pre dané \% najohrozenejších zákazníkov}\label{fig:lift}
+\end{figure}
+
+
+
 
 \begin{comment}
 \section{Časť}

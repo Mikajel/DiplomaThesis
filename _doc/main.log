@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.11)  10 MAY 2016 22:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.11)  11 MAY 2016 02:39
 entering extended mode
 **./main.tex
 (main.tex
@@ -578,13 +578,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--62
 
  []
 
-(thesis/anotation-English.tex)) [4] (main.toc)
+(thesis/anotation-English.tex)) [4] (main.toc [5
+
+])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [5
-
-] (thesis.tex
+ [6] (thesis.tex
 (thesis/introduction.tex
 Kapitola 1.
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 14.
@@ -628,7 +628,7 @@ Overfull \hbox (2.2651pt too wide) in paragraph at lines 46--48
 l do kla-sic-kého WWW(world
  []
 
-<figures/vaw.png, id=156, 627.09282pt x 338.76563pt>
+<figures/vaw.png, id=185, 627.09282pt x 338.76563pt>
 File: figures/vaw.png Graphic file (type png)
  <use figures/vaw.png>
 Package pdftex.def Info: figures/vaw.png used on input line 50.
@@ -639,14 +639,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--102
 
  []
 
-<figures/neuronoutput.png, id=176, 241.90375pt x 56.21pt>
+<figures/neuronoutput.png, id=206, 241.90375pt x 56.21pt>
 File: figures/neuronoutput.png Graphic file (type png)
 
 <use figures/neuronoutput.png>
 Package pdftex.def Info: figures/neuronoutput.png used on input line 109.
 (pdftex.def)             Requested size: 154.81786pt x 35.97426pt.
  [8]
-<figures/fnn.png, id=188, 472.01344pt x 284.56313pt>
+<figures/fnn.png, id=217, 472.01344pt x 284.56313pt>
 File: figures/fnn.png Graphic file (type png)
  <use figures/fnn.png>
 Package pdftex.def Info: figures/fnn.png used on input line 119.
@@ -658,7 +658,7 @@ Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                removing `\textasciicaron' on input line 123.
 
 [9 <./figures/neuronoutput.png> <./figures/fnn.png>]
-<figures/rnn.png, id=196, 507.39563pt x 284.56313pt>
+<figures/rnn.png, id=225, 507.39563pt x 284.56313pt>
 File: figures/rnn.png Graphic file (type png)
  <use figures/rnn.png>
 Package pdftex.def Info: figures/rnn.png used on input line 156.
@@ -670,7 +670,7 @@ Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 160.
 
-[11 <./figures/rnn.png>] <figures/lstm.png, id=211, 660.21657pt x 563.10374pt>
+[11 <./figures/rnn.png>] <figures/lstm.png, id=240, 660.21657pt x 563.10374pt>
 File: figures/lstm.png Graphic file (type png)
 
 <use figures/lstm.png>
@@ -681,7 +681,7 @@ Overfull \hbox (32.53716pt too wide) in paragraph at lines 186--186
  [] 
  []
 
-<figures/peepholes.png, id=212, 910.90312pt x 465.23813pt>
+<figures/peepholes.png, id=241, 910.90312pt x 465.23813pt>
 File: figures/peepholes.png Graphic file (type png)
 
 <use figures/peepholes.png>
@@ -692,7 +692,37 @@ Overfull \hbox (65.45044pt too wide) in paragraph at lines 192--192
  [] 
  []
 
-[12 <./figures/lstm.png>]) (thesis/design.tex [13 <./figures/peepholes.png>]
+[12 <./figures/lstm.png>]
+
+Package hyperref Warning: Composite letter `\textasciicaron+t'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 201.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--207
+
+ []
+
+[13 <./figures/peepholes.png>]
+<figures/producttable.png, id=255, 810.77907pt x 67.0003pt>
+File: figures/producttable.png Graphic file (type png)
+
+<use figures/producttable.png>
+Package pdftex.def Info: figures/producttable.png used on input line 228.
+(pdftex.def)             Requested size: 405.38855pt x 33.50006pt.
+
+Overfull \hbox (15.38855pt too wide) in paragraph at lines 228--228
+ [] 
+ []
+
+[14] <figures/lift.png, id=262, 624.08156pt x 330.48468pt>
+File: figures/lift.png Graphic file (type png)
+
+<use figures/lift.png>
+Package pdftex.def Info: figures/lift.png used on input line 245.
+(pdftex.def)             Requested size: 312.04001pt x 165.24193pt.
+ [15 <./figures/producttable.png>]) (thesis/design.tex
+[16 <./figures/lift.png>]
 Kapitola 3.
 
 Package hyperref Warning: Composite letter `\textasciicaron+C'
@@ -704,11 +734,11 @@ Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 5.
 
-) [14
+) [17
 
-] (thesis/conclusions.tex [15]
+] (thesis/conclusions.tex [18]
 Kapitola 4.
-)) [16
+)) [19
 
 ]
 No file main.bbl.
@@ -718,15 +748,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 131.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 131.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 131.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: CA31B575744E37919BB74BFA62C1FBDC;1512.
+(rerunfilecheck)             Checksum: 1EB47A2853CA4DBB79C8ECD524F17C43;1915.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 131.
  ) 
 Here is how much of TeX's memory you used:
- 12306 strings out of 493634
- 183164 string characters out of 3141311
- 308694 words of memory out of 3000000
- 15259 multiletter control sequences out of 15000+200000
- 56890 words of font info for 94 fonts, out of 3000000 for 9000
+ 12344 strings out of 493634
+ 183809 string characters out of 3141311
+ 309977 words of memory out of 3000000
+ 15278 multiletter control sequences out of 15000+200000
+ 57197 words of font info for 97 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  38i,8n,43p,1221b,586s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program F
@@ -741,9 +771,9 @@ X 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
 type1/public/lm/lmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
 lm/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri12.p
 fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (21 pages, 589983 bytes).
+Output written on main.pdf (25 pages, 653519 bytes).
 PDF statistics:
- 287 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 16603 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 340 PDF objects out of 1000 (max. 8388607)
+ 60 named destinations out of 1000 (max. 500000)
+ 16653 words of extra memory for PDF output out of 17280 (max. 10000000)
 
