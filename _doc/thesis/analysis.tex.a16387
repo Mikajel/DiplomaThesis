@@ -23,19 +23,19 @@ Populárna technika využívaná pre cross-selling sa nazýva MBA. Hlavná idea 
 	\item {Lift}
 \end{my_itemize}
 
-\subsection{Support}
+\section{Support}
 \label{support}
 Neobvyklé udalosti či položky často predstavujú informácie, ktoré nemajú dostatočný význam pre ich sledovanie. Support predstavuje spôsob, ako ich ignorovať. Pre konkrétny produkt/službu je sledovaný výskyt v dátach. Pokiaľ nedosahuje stanovenú úroveň, položka je ignorovaná ako nezaujímavá pre analýzu.
 
 Položky, ktoré sú takýmto spôsobom zredukované, sú následne analyzované podľa apriori algoritmu. \textbf{Apriori algoritmus} združuje často nakupované položky podľa ich spoločného výskytu v nákupoch. Algoritmus pracuje iteratívne - najprv vytvára dvojice, potom trojice, atď., až kým neexistujú skupiny, ktoré by dosahovali potrebné minimum spoločných výskytov nato, aby boli vyhodnotené ako skupina.
 
-\subsection{Confidence}
+\section{Confidence}
 \label{confidence}
 Confidence vyhodnocuje podmieňenú pravdepodobnosť výskytu jednej položky alebo skupiny položiek(RHS - right hand side) za predpokladu, že sa už v košíku nachádza iná položka alebo skupina(LHS - left hand side).
 
 $conf(LHS\to RHS) = P(RHS | LHS) = \frac{P(RHS \cap LHS)}{P(LHS)} = \frac{supp(LHS\cap RHS)}{supp(LHS)}$
 
-\subsection{Lift}
+\section{Lift}
 \label{lift}
 Lift predstavuje mieru zlepšenia výskytu hodnotenej položky za predpokladu položky v košíku. Je to pomer pravdepodobností výskytu oboch položiek v pomere k pravdepodobnosti výskytu položky, ktorú sa chystáme odporučiť(RHS)
 
@@ -45,45 +45,33 @@ $lift(LHS\to RHS) = \frac{P(RHS \cap LHS)}{P(RHS)} = \frac{conf(LHS\to RHS)}{sup
 \section{Odporúčacie systémy}
 \label{odporucacie_systemy}
 
-Odporúčacie systémy(ang. \textit{recommenders}) predstavujú skupinu softvérových nástrojov pre odporúčanie položiek používateľom. Ako najčastejšie aplikácie v súčasnosti vystupuje odporúčanie v online nakupovaní, hudbe alebo zdrojoch informácií ~\cite{ricci2011introduction}. Odporúčacie systémy sú obľúbenou témou výskumu kvôli svojmu potenciálu pri aplikácii v biznis sfére.
+Odporúčacie systémy(ang. recommenders) predstavujú skupinu softvérových nástrojov pre odporúčanie položiek používateľom. Ako najčastejšie aplikácie v súčasnosti vystupuje odporúčanie v online nakupovaní, hudbe alebo zdrojoch informácií ~\cite{ricci2011introduction}. Odporúčacie systémy sú obľúbenou témou výskumu kvôli svojmu potenciálu pri aplikácii v biznis sfére.
 
-Hlavnou úlohou odporúčacieho systému je poskytnúť odporúčania - zoradený zoznam položiek, kde nás zaujímajú položky s najvyšším hodnotením. Hodnotenie(angl. \textit{rating}) predstavuje relevantnosť alebo zaujímavosť, ktorú pre používateľa daná položka má. Ako jednoduchý príklad hodnotenia môžeme uviesť skóre alebo počet hviezdičiek, ktoré používateľ priradí filmu, reštaurácii alebo hotelu. Odporúčacie systémy sa snažia odhaliť charakteristické črty cieľového používateľa a vygenerovať zoznam, ktorý zodpovedá jeho potrebám alebo záujmom ~\cite{adomavicius2005toward}.
-
-\subsection{Odporúčacie systémy založené na obsahu}
-\label{content_based_recommenders}
-
-Táto podmnožina odporúčacích systémov je založená na myšlienke, že používateľovi sa budú páčiť položky, ktoré zdieľajú charakteristické črty s položkami, o ktoré prejavil záujem v minulosti. Úlohou systému je teda evidencia charakteristických čŕt položiek a generovanie matíc vzdialeností medzi jednotlivými položkami. Výber odporúčaných položiek je následne realizovaný ako zoradený zoznam položiek podľa najkratšej vzdialenosti od množiny položiek, ktoré používateľ ohodnotil pozitívne a zároveň najväčšej vzdialenosti od negatívne hodnotených položiek~\cite{adomavicius2005toward}.
+Hlavnou úlohou odporúčacieho systému je poskytnúť odporúčania - zoradený zoznam položiek, kde nás zaujímajú položky s najvyšším hodnotením. Hodnotenie(angl. \textit{rating}) predstavuje relevantnosť alebo zaujímavosť, ktorú pre používateľa daná položka má. Ako jednoduchý príklad hodnotenia môžeme uviesť skóre alebo počet hviezdičiek, ktoré používateľ priradí filmu, reštaurácii alebo hotelu. Odporúčacie systémy sa snažia odhaliť charakteristické črty cieľového používateľa a vygenerovať zoznam, ktorý zodpovedá jeho potrebám alebo záujmom. 
 
 
-\subsection{Kolaboratívne odporúčacie systémy}
-\label{collaboration_based_recommenders}
 
-Narozdiel od predošlého prístupu, kolaboratívne systémy sa spoliehajú na nepriame spojitosti medzi položkami. Analýzou predošlých preferencií sa vytvorí profil používateľa, ktorý je následne porovnávaný s profilmi ostatných používateľov. Vytvorený zoznam odporúčaní predstavuje najlepšie ohodnotené položky od používateľov s najväčšou zhodou používateľského profilu~\cite{adomavicius2005toward}.
 
-\subsection{Hybridné systémy}
-\label{hybrid_recommenders}
 
-Kombinácie prístupov sa snažia prekonať nedostatky oboch prístupov vzájomným dopĺňaním sa. Existuje niekoľko prístupov, ktorými je možné kombinovať prístupy ~\cite{burke2002hybrid}:
+\section{Moderovanie úbytku zákazníkov}
+\label{analyza_moderovanie_ubytku}
 
-\begin{my_itemize}
-	\item{Váhovanie} - kombinácia výstupov oboch systémov do jedného odporúčania
-	\item{Prepínanie} - vyberanie výstupu podľa situácie
-	\item{Miešanie} - zobrazenie viacerých výstupov separátne
-	\item{Kombinovanie} - spájanie podčastí do jediného systému
-	\item{Kaskáda} - systém B schvaľuje položky vybrané iným systémom
-	\item{Augmentácia} - systém B odporúča výber z výstupu systému A
-	\item{Meta-úroveň} - model systému A je vstupom pre systém B
-\end{my_itemize}
+Vo vzťahu k úbytku zákazníkov definuje CRM dva základné prístupy, ktorými je možné moderovať úbytok~\cite{burez2007crm}.
 
-\subsection{Problémy odporúčania}
-\label{recommender_problems}
+\subsection{Reaktívny prístup}
+\label{analyza_reaktivny_pristup}
 
-Slabinou odporúčacích systémov sú nedostatočné historické dáta. Problém predstavujú hlavne pre nových používateľov, ktorí si nevybrali dostatok položiek aby im bol vygenerovaný používateľský profil. V takomto prípade nie je možné robiť porovnanie s ostatnými používateľmi ani generovať na základe už vybraných položiek. Je to problémom kolaboratívneho aj obsahového odporúčania. Podobný problém predstavuje ohodnotená vzorka položiek. Je možné generovať odporúčania podobných položiek, ale bez ohodnotenia svojej skúsenosti predchádzajúcim používateľom nie je nijaká záruka, že odporúčanie bude vhodné~\cite{adomavicius2005toward}.
+Motivácia zákazníka pre zotrvanie s pôvodným poskytovateľom služby nastáva, až keď sa zákazník explicitne rozhodne pre prechod ku konkurenčnému poskytovateľovi. V tomto okamihu začína poskytovateľ na svojho zákazníka apelovať výhodnými ponukami, zľavami alebo inými spôsobmi motivácie pre zotrvanie u poskytovateľa. Takýto prístup sa ukazuje ako ľahko zneužiteľný ostatnými zákazníkmi, ktorí by inak nemali motiváciu pre prechod ku konkurencii. Predikcia úbytku zákazníkov v tomto prístupe nemá nijakú významnú úlohu.
+
+\subsection{Proaktívny prístup}
+\label{analyza_proaktivny_pristup}
+
+Pri úspešnej predikcii záujmu zákazníka o prechod ku konkurenčnému poskytovateľovi je možné efektívne jeho zámer smerovať pozitívnou motiváciou. Tento prístup však predpokladá vysokú úspešnosť predikčných metód. Pri nesprávnej identifikácii zákazníckeho správania je totiž nielen možné nezabrániť zákazníkom v presune ku konkurenčnému modelu, ale aj investícii finančných prostriedkov do skupiny zákazníkov, ktorá by naďalej generovala zisk aj bez významnejšej motivácie, resp. nevrátila by rozdielom v úbytku motivačné náklady, ktoré na ňu daný poskytovateľ vynaložil.
 
 \chapter{Dáta sprístupnené pre prácu}
 \label{analyza_data}
 
-Pre túto prácu boli sprístupnené dáta z používateľských prístupov na stránky e-shopu ponúkajúceho produkty a služby tretích strán za výhodnejších podmienok. Partneri(tretie strany) uverejňujú svoje akciové ponuky na portáli, ktorý im ponúka zákaznícky atraktívne prostredie. Zákazníci sú motivovaní navštevovať portál kvôli tomu, že portál uverejňuje iba akciové ponuky. Spoločnosti získavajú zákazníkov bez potreby nadmernej reklamnej kampane tým, že sa ich ponuka objaví na portáli s vysokou navštevovanosťou. Pre túto prácu disponujeme s niekoľkomesačnými používateľskými dátami, ktoré predstavujú zhruba desať miliónov záznamov od milióna používateľov.
+Pre túto prácu boli sprístupnené dáta z používateľských prístupov na stránky e-shopu ponúkajúceho produkty a služby tretích strán za výhodnejších podmienok. Partneri(tretie strany) uverejňujú svoje akciové ponuky na portáli, ktorý im ponúka zákaznícky atraktívne prostredie. Zákazníci sú motivovaní navštevovať portál kvôli tomu, že portál uverejňuje iba akciové ponuky. Spoločnosti získavajú zákazníkov bez potreby nadmernej reklamnej kampane tým, že sa ich ponuka objaví na portáli s vysokou navštevovanosťou. Pre túto prácu disponujeme s niekoľkomesačnými používateľskými dátami.
 
 \section{Získavanie dát}
 \label{analyza_ziskavanie_dat}
@@ -172,20 +160,6 @@ Učenie predstavuje kľúčovú aktivitou pre schopnosť siete produkovať poža
 \textbf{Učenie bez učiteľa} predstavuje alternatívnu metódu, pri ktorej tréningové dáta nemajú dostupné výsledky. Neurónová sieť sa sama učí rozhodnúť, čo je pre ňu relevantné. Učenie bez učiteľa predstavuje možnosť ako získať takmer neobmedzené množstvá tréningových dát tam, kde učenie s učiteľom vyžaduje manuálne a kvôli časovej náročnosti nedostupné označovanie.
 \noindent
 
-\section{Optimalizácia}
-\label{optimalization}
-
-Snahou optimalizácie je hľadať ideálne riešenie v často obrovskom prehľadávanom priestore. V prípade neurónových sietí je to hľadanie optimálneho nastavenia siete, ktorá následne dokáže meniť vstup na predpokladaný výstup. Asi najčastejšou úlohou optimalizačných techník v neurónových sieťach je minimalizovať stratu(angl. \textit{loss}). Tá naznačuje, ako ďaleko sa naša sieť nachádza od konvergencie k ideálnemu riešeniu. Je definovaná ako súčet chýb, ktoré boli dosiahnuté v tréningových alebo validačných množinách. Pri učení sa snažíme optimalizovať stratu, ale nie nulovať ju. V bežných prípadoch pri zašumených dátach totiž nulová chyba znamená preučenie - kopírovanie datasetu namiesto odhaľovania vzorov v ňom.
-
-\subsection{Gradient descent}
-\label{stochastic_gradient_descent}
-
-Gradient descent predstavuje stratégiu spätnej propagácie v ktorej je vypočítaná derivácia chyby a tá je následne prenesená do parametrov siete ich upravovaním pre minimalizáciu chyby v nasledujúcej iterácii. 
-
-Obľúbená varianta je \textbf{stochastický gradient descent}, ktorý je síce menej presný, ale prenáša chybu po každej iterácii, narozdiel od originálneho stochastického gradientu, ktorý upravuje parametre až po celej sade. Ajkeď teda SGD nedosiahne presnosť GD, dostane sa do blízkosti riešenia oveľa rýchlejšie a bude tam oscilovať. Táto vlastnosť ho uprednostňuje pri väčších datasetoch.
-
-Pri používaní gradient descent algoritmu je problematické správne odhadnúť hyperparametre. Bežný postup je preskúmať široké okolie a sledovať ako vplýva zmena hyperparametrov na schopnosť minimalizácie chyby~\cite{zhang2004solving}.
-
 
 \section{Hyperparametre}
 \label{analyza_hyperparametre}
@@ -193,21 +167,12 @@ Pri používaní gradient descent algoritmu je problematické správne odhadnú�
 Nastavenia, pomocou ktorých kontrolujeme správanie neurónových sietí sa nazývajú \textit{hyperparametre}. Tieto hodnoty nie sú získané učením siete pokiaľ nemodelujeme vnorený systém za týmto účelom. Príkladom hyperparametra je počet skrytých vrstiev NN. Pri nízkom počte nebude model schopný naučiť sa funkciu definovanú problémom. Pri vysokom počte je možné, že sieť v sebe uloží menší tréningový dataset, nazývané tiež ako problém \textit{preučenia}(overfitting). Pri preučení sieť nezíska schopnosť generalizácie problému kvôli sledovaniu tréningového datasetu. Je zjavné, že zvolenie správnych hyperparametrov má pre výsledky metódy kľúčovú úlohu~\cite{Goodfellow-et-al-2016-Book}.
  Medzi ďaľšie významné hyperparametre patria:
 \begin{my_itemize}
-	\item {Šírka jednotlivých vrstiev} - ovplyvňuje koľko prepojení existuje a mení tak nároky siete na učenie ako aj zložitosť vzorov, ktoré sa sieť dokáže naučiť.
-	\item {Rýchlosť učenia} - rozhoduje o tom, v ako rozsahu bude upravovaná sieť pri spätnej propagácií. Vystupuje ako kvantifikátor aplikovanej zmeny váh.
-	\item {Momentum} - predstavuje riešenie pre problém lokálneho minima aj pre osciláciu pri stochastickom gradient descente. Vysoké momentum je schopné prekonať lokálne minimum a pri oscilácii okolo globálneho riešenia sa spomaľuje~\cite{attoh1999analysis}.
+	\item {Šírka jednotlivých vrstiev}
+	\item {Rýchlosť učenia}
+	\item {Momentum}
+	\item {Aktivačné funkcie neurónov}
 \end{my_itemize}
 
-\section{Aktivačná funkcia}
-\label{activation_function}
-
-Aktivácia je matematická operácia aplikovaná na výstupy z predchádzajúcej vrstvy. Mení vstupné hodnoty na výstupný signál. 
-
-\textbf{Sigmoidná funkcia} - Produkuje signál v kladnom rozsahu $<0,1>$. Najefektívnejšia je pre dáta ktoré sú na vstupe v rovnakom rozsahu~\cite{sibi2013analysis}.
-
-\textbf{ReLU} - Usmernená lineárna jednotka, predstavuje najjednoduchšiu derivovateľnú nelineárnu funkciu. Nesaturuje výstup a vďaka tomu dosahuje dobré výsledky pre hlboké neurónové siete - nevzniká efekt miznúceho gradientu.
-	
-\textbf{Softmax} - Funkcia najčastejšie využívaná pri klasifikačných úlohách na výstupe. Škáluje výsledné neuróny tak, aby spoločný výstupný signál dosahoval hodnotu 1. ~\cite{toth2013phone}
 
 
 \section{Rekurentné neurónové siete}
@@ -233,7 +198,7 @@ LSTM predstavuje vylepšený model RNN. Vnútorná štruktúra ako doplnok ku ex
 
 
 %ako do riti mam prelozit peepholes? 
-\textbf{Nazeracie diery}(peepholes) predstavujú vylepšenie LSTM. Rieši problémy, ktoré vznikajú na základe faktu, že brána nedostáva priame informácie o stave jadra LSTM bloku(CEC). Táto situácia nastáva, keď je výstupná brána zatvorená. \textit{Nazeranie} predstavuje techniku váhovaného prepojenia CEC s bránami bloku daného jadra. Prepojenia sú štandardné s výnimkou časovej pauzy.
+\textbf{Nazeracie diery}(peepholes) predstavujú vylepšenie LSTM. Rieši problémy, ktoré vznikajú na základe faktu, že brána nedostáva priame informácie o stave jadra LSTM bloku(CEC). Táto situácia nastáva, keď je výstupná brána zatvorená. \textit{Nazeranie} predstavuje techniku váhovaného prepojenia CEC s bránami bloku daného jadra. Prepojenia sú štandardné s výnimkou časovej pauzy. Schéma nazerania v LSTM bloku je zobrazená na obr.~\ref{fig:peepholes}.
 
 LSTM siete v praxi dokázali svoje schopnosti pri aplikácií na rôzne netriviálne dátové problémy. Pozornosť je kladená na frekventovanú časovú závislosť v dátach:
 %deeplearning LSTM ma odkazy na konkretne projekty
@@ -246,66 +211,72 @@ LSTM siete v praxi dokázali svoje schopnosti pri aplikácií na rôzne netrivi�
 
 \begin{figure}[H]
 \begin{center}
+\includegraphics[scale=0.64]{lstm}\end{center}
+\caption[lstm]{Štruktúra LSTM bunky~\cite{gers2003learning}}\label{fig:lstm}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
 \includegraphics[scale=0.50]{peepholes}\end{center}
 \caption[peepholes]{Schéma nazerania v LSTM bloku~\cite{gers2003learning}}
-\label{fig:lstm}
+\label{fig:peepholes}
 \end{figure}
 
 \chapter{Výskum v danej oblasti}
 \label{analyza_vyskum_danej_oblasti}
 
-V tejto časti sa zaoberáme štúdiami skúmajúcimi aplikáciu data-miningu pri generovaní odporúčaní a aplikáciou neurónových sietí v dátovej analytike. Tieto štúdie vedú k optimalizácii poskytovania online produktov a služieb.
+V tejto časti sa zaoberáme štúdiou dostupných riešení pre problém úbytku zákazníkov. Zameriavame sa na metódy strojového učenia. Analýza poskytuje náhľad do konkrétneho biznis odvetvia, v ktorom bol skúmaný úbytok zákazníkov pre lepšie pochopenie stratégie, s ktorou bolo spracovanie dát a použité metódy optimalizované.
 
-\section{RecSys Challenge 2015}
-\label{recsys_challenge}
+\section{Markovove reťazce, náhodné lesy}
 
-RecSys Challenge 2015 bola súťaž v data-miningu zameranom na odporúčacie zariadenia vyhlásená organizáciou ACM. Súťažiaci mali možnosť implementovať riešenie, ktoré by dokázalo s čo najväčšou úspešnosťou predpovedať na testovacej množine nákupy v online obchode~\cite{ben2015recsys}.
-
-\subsection{Dáta}
-Pre túto súťaž boli poskytnuté dáta od vlastníka väčšieho európskeho portálu pre elektronický predaj. Dáta reprezentujú zhruba 6 mesačnú aktivitu používateľov na portáli. Dokopy súbory obsahujú vyše 33 miliónov záznamov z klikov zoskupených do 9.5 milióna sessions. Z toho bolo predaných 1.1 milióna položiek. Dáta sú rozdelené do dvoch súborov:
-
-\begin{my_itemize}
-	\item{yoochoose-clicks.dat}\newline
-	- ID session, čas, ID položky, kategória položky
-	\newline
-	\item{yoochoose-buys.dat}\newline
-	- ID session, čas, ID položky, cena, množstvo
-	
-\end{my_itemize}
-
-Cieľom súťaže bolo predpovedať, ktoré používateľské sessions budú nákupné a ktoré z prehliadaných položiek budú kúpené. Metrikou pre úspešnosť bol vzorec:
-
-
-\label{recsys_evaluation}
-$$
-score(Sl)=\Sigma_{\forall S \in Sl} =\\
-\begin{cases}
-	if s \in Sb \to \frac{Sb}{S} + \frac{|AS\cap BS|}{|AS\cup BS|} \\
-	else \to -\frac{Sb}{S}\\
-\end{cases}
-$$
-
-kde platí:
+Štúdia aplikuje štatistické modely, medzi nimi najúspešnejšie \textit{Markovove reťazce} a \textit{náhodné lesy} pri predikcii úbytku zákazníkov spoločnosti poskytujúcej káblovú televíziu. Skúmaná spoločnosť v minulosti rýchlo získala veľký podiel zákazníkov na trhu, o ktorý začala stabilne počas rokov prichádzať. Táto spoločnosť za použitia metód na predpovedanie úbytku zákazníkov dokázala takmer zdvojnásobiť svoje zisky zameriavaním sa na pozitívnu motiváciu najrizikovejších zákazníkov~\cite{burez2007crm}. 
+\newline
+Spoločnosť ponúka stabilné ročné predplatné bez možnosti prerušenia zmluvy. Nahlasovanie plánovaného nepredlžovania zmluvy je povinné v poslednom mesiaci zmluvy, pričom neohlásenie automaticky predlžuje zmluvu na ďaľší rok. V štúdii boli sledovaní zákazníci, ktorí mali aktívnu zmluvu vo \textit{vzorkovacom dátume}(28. 2. 2002) a neboli vylúčení kvôli neplateniu predplatného. 
+\newline
+\subsection{Dataset}
+\label{markov_dataset}
+Dataset zákazníkov obsahuje nasledovné informácie o zákazníkoch:
 
 \begin{my_itemize}
-	\item{Sl} - počet session vložených ako riešenie
-	\item{S} - počet všetkých sessions v teste
-	\item{s} - session v teste
-	\item{Sb} - počet nákupných sessions v teste
-	\item{As} - sada predikovaných nákupov v session s
-	\item{Bs} - sada kúpených položiek v session s
+	\item{Zmluvné} - počet mesiacov trvania predplatného, mesiac ukončenia, typ produktu, špeciálne balíčky(šport, filmové, ...), spôsob platby
+	\item{Socio-demografické} - vek, pohlavie, región, biznis
+	\item{Finančné} - upomienky, typ upomienok, čas od poslednej upomienky
+	\item{Historické} - počet obnov predplatného, získané zľavy 
 \end{my_itemize}
 
-Perfektné skóre dosiahnuteľné pre tento dataset s danou metrikou je 135176, pričom víťazný tím dosiahol skóre 63102. Na obrázku \ref{recsys} možno sledovať najlepšie riešenia v priebehu mesiacov.
+
+Evidovaní zákazníci, ktorí opustili spoločnosť tvoria 15\% z datasetu. Pri využití metód bola vyhradená časť dát(60\%) pre kalibráciu a časť(40\%) pre testovanie úspešnosti. Stratifikácia bola aplikovaná kvôli udržaniu pomeru 15\% odchádzajúcich zákazníkov pre obe časti~\cite{neslin2004defection}.
+
+\subsection{Markovove reťazce}
+\label{markov_markov}
+
+Markovove reťazce sú pravdepodobnostná technika pre reprezentáciu korelácie medzi za sebou idúcimi pozorovaniami. Táto štúdia poukazuje na vplyv sekvencie v odoberanom type produktu na predpoveď, viď. tabuľku ~\ref{fig:producttable}. Kvôli tomuto javu boli využité Markovove reťazce.
+
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=0.50]{recsys}\end{center}
-	\caption[recsys]{Najlepšie priebežné výsledky počas trvania súťaže~\cite{ben2015recsys}}
-	\label{fig:recsys}
+\begin{center}
+\includegraphics[scale=0.50]{producttable}\end{center}
+\caption[producttable]{Sekvencia typu odoberanej služby dvoch zákazníkov~\cite{burez2007crm}}
+\label{fig:producttable}
 \end{figure}
 
+\subsection{Náhodné lesy}
+\label{markov_lesy}
 
+Kvôli svojej jednoduchosti použitia a interpretácie a schopnosti práce s ukazateľmi na rôznych úrovniach merania sa stali rozhodovacie stromy populárnou metódou predikcie. Ich nevýhody(ako napr. nedostatok robustnosti) úspešne rieši vytváranie veľkého počtu stromov so samostatným hlasovaním - lesov. Tento experiment využil náhodné lesy podľa štúdie L. Breimana~\cite{breiman2001random}.
+
+\subsection{Evaluácia}
+\label{markov_evaluacia}
+
+Štúdia pri evaluácii využíva počítanie zdvihu - pomeru zákazníkov predikovaných ako náchylných k prechodu a z nich zákazníkov, ktorí prešli inam, relatívne k percentu všetkých ušlých zákazníkov. Vysoký zdvih teda indikuje úspešný model. Pri 15,13\% úbytku zákazníkov teda perfektná predpoveď predstavuje $100/15,13 = 6,61$ zdvih. Na grafe~\ref{fig:lift} je možné vidieť úspešnosť jednotlivých metód pri vybratí daného percenta najohrozenejších zákazníkov. Vidno tu úspešnosť náhodných lesov aj takmer nulové zlepšenie logistickej regresie Markovovými reťazcami.
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.50]{lift}\end{center}
+\caption[lift]{Výsledky použitých metód pre dané \% najohrozenejších zákazníkov~\cite{burez2007crm}}
+\label{fig:lift}
+\end{figure}
 
 \section{Neurónová sieť}
 \label{metoda_neuronova_siet}
@@ -319,84 +290,23 @@ Záznamy 20 rôznych premenných od 2427 zákazníkov obsahujú okrem samotnej i
 \newline
 štát, doba aktívnosti účtu, kód oblasti, telefónne číslo, medzinárodný plán (áno/nie), služba hlasového záznamu, počet hlasových záznamov, prevolané minúty (deň/večer/noc), počet hovorov(deň/večer/noc), (deň/večer/noc) platba, medzinárodné služby, počet volaní na zákaznícku linku.
 
-\subsection{Predikcia nákupov pomocou LSTM BiRNN}
-\label{yoochoose_lstm}
+\subsection{Neurónová sieť}
+\label{metoda_nn}
 
-Štúdia~\cite{wu2015neural} využíva rekurentnú neurónovú sieť s krátkou dlhodobou pamäťou(LSTM) pri predikcií YooChoose datasetu vzorov v klikaní na stránkach internetového predajného portálu. Prístup oddeľuje dve separátne problematiky - predikciu nákupných sessions a následne predikciu kúpených položiek. 
+Táto štúdia pracuje s klasickým modelom FNN pri predikcii. Ako prevencia problému preučenia funguje vyberanie náhodných záznamov do tréningového datasetu. Zbytok dát je využitých pre evaluáciu schopností siete predikovať úbytok.
 
-Dostupné dáta~\ref{recsys_challenge} sú predspracované na vstup do neurónovej siete. Tá následne po tréningu predpovedá výsledky pre testovacie dáta. Po predspracovaní vyzerajú jednotlivé vstupy do siete nasledovne:\newline
-\linebreak
-
-
-\parbox{.45\linewidth}{
-
-	\begin{tabular}{||c||} 
-		\hline
-		Predpovedanie položiek  \\ [0.5ex] 
-		\hline\hline
-		Mesiac  \\ 
-		\hline
-		Deň v týždni  \\
-		\hline
-		Čas dňa(minúty) \\
-		\hline
-		Počet klikov na položku \\
-		\hline
-		Počet nákupov položky  \\ 
-		\hline
-		Aktuálna cena položky  \\
-		\hline
-		Maximálna cena položky \\
-		\hline
-		Minimálna cena položky \\
-		\hline
-		Položka na predaj \\
-		\hline
-		Trvanie kliku \\
-		\hline
-		Kategória \\ [1ex] 
-		\hline
-	\end{tabular}
-}
-\parbox{.45\linewidth}{
-	\begin{tabular}{||c||} 
-		\hline
-		Predpovedanie nákupnej session  \\ [0.5ex] 
-		\hline\hline
-		Počet kikov v session  \\ 
-		\hline
-		Počet unikátnych položiek v session  \\
-		\hline
-		Počet klikov za minútu \\
-		\hline
-		Minimálny počet klikov v session \\
-		\hline
-		Maximálny počet klikov v session  \\ 
-		\hline
-		Priemerný počet klikov \\
-		\hline
-		Trvanie session \\
-		\hline
-		Priemerné trvanie kliku\\
-		\hline
-		Minimálna dĺžka kliku \\
-		\hline
-		Maximálna dĺžka kliku \\
-		\hline
-		... \\ [1ex] 
-		\hline
-	\end{tabular}
-}
-
-Táto práca sa porovnala s niekoľkými ďaľšími metódami ako gradient-boosting regresia a hlboká neurónová sieť (DNN). Skóre sa odvíja od metriky pre yoochoose dataset ~\ref{recsys_evaluation}.
+Výsledná úspešnosť siete dosahuje 92,35\%. Architektúra tejto siete využíva jeden neurón pre každý vstup na prvej vrstve. Informácie o čísle a štáte neboli zahrnuté, lebo plnili iba identifikačnú funkciu. Po rozsiahlejších experimentoch so skrytými vrstvami sa ako najlepšie riešenie ukazuje využitie jedinej skrytej vrstvy s 3 neurónmi. Na výstupe neurónová sieť poskytuje informáciu o prechode(áno/nie) ale aj istotu, s ktorou tento výsledok určila. 
+\newline
+Na obr.~\ref{fig:importance} je tiež vidno, ako boli vyhodnotené jednotlivé vstupné parametre z hľadiska dôležitosti. Tá je určená na intervale $<0; 1>$, pričom však zriedka prekročí $0,35$. Ako sa ukázalo, najdôležitejším indikátorom prechodu zákazníka je počet volaní na zákaznícku podporu a množstvo medzinárodných služieb.
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=0.56]{recsys_yoochoose}\end{center}
-	\caption[pixelmap]{Vyhodnotenie}
-	\label{fig:evaluation}
+\begin{center}
+\includegraphics[scale=0.50]{importance}\end{center}
+\caption[importance]{Vplyv parametrov na stratu zákazníka~\cite{sharma2013neural}}
+\label{fig:importance}
 \end{figure}
 
+Tento model správne predikuje až 97\% ostávajúcich zákazníkov. Správne však určí iba 66\% strácaných zákazníkov. Evaluácia tohto výsledku je teda ťažko interpretovatelná hodnotou 92\%. 
 
 \subsection{Hlboká konvolučná neurónová sieť}
 \label{metoda_konvolucna}
