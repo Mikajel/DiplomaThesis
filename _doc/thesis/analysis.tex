@@ -296,7 +296,7 @@ kde platí:
 	\item{Bs} - sada kúpených položiek v session s
 \end{my_itemize}
 
-Perfektné skóre dosiahnuteľné pre tento dataset s danou metrikou je 135176, pričom víťazný tím dosiahol skóre 63102. Na obrázku \ref{recsys} možno sledovať najlepšie riešenia v priebehu mesiacov.
+Perfektné skóre dosiahnuteľné pre tento dataset s danou metrikou je 135176, pričom víťazný tím dosiahol skóre 63102. Na obrázku \ref{fig:recsys} možno sledovať najlepšie riešenia v priebehu mesiacov.
 
 \begin{figure}[H]
 	\begin{center}
@@ -305,19 +305,6 @@ Perfektné skóre dosiahnuteľné pre tento dataset s danou metrikou je 135176, 
 	\label{fig:recsys}
 \end{figure}
 
-
-
-\section{Neurónová sieť}
-\label{metoda_neuronova_siet}
-
-Neurónová sieť bola využitá pri štúdii zaoberajúcej sa predikciou úbytku zákazníkov u mobilného operátora. Zdanlivo jednoduchý model využívajúci učenie s učiteľom priniesol prekvapivo dobré výsledky pre verejne dostupný dataset~\cite{sharma2013neural}.
-
-\subsection{Dataset}
-\label{nn_dataset}
-
-Záznamy 20 rôznych premenných od 2427 zákazníkov obsahujú okrem samotnej informácie o úbytku nasledovné informácie:
-\newline
-štát, doba aktívnosti účtu, kód oblasti, telefónne číslo, medzinárodný plán (áno/nie), služba hlasového záznamu, počet hlasových záznamov, prevolané minúty (deň/večer/noc), počet hovorov(deň/večer/noc), (deň/večer/noc) platba, medzinárodné služby, počet volaní na zákaznícku linku.
 
 \subsection{Predikcia nákupov pomocou LSTM BiRNN}
 \label{yoochoose_lstm}

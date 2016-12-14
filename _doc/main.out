@@ -26,8 +26,21 @@
 \BOOKMARK [0][-]{chapter.5}{V\375skum v danej oblasti}{}% 26
 \BOOKMARK [1][-]{section.5.1}{RecSys Challenge 2015}{chapter.5}% 27
 \BOOKMARK [2][-]{subsection.5.1.1}{D\341ta}{section.5.1}% 28
-\BOOKMARK [1][-]{section.5.2}{Neur\363nov\341 siet}{chapter.5}% 29
-\BOOKMARK [2][-]{subsection.5.2.1}{Dataset}{section.5.2}% 30
-\BOOKMARK [2][-]{subsection.5.2.2}{Predikcia n\341kupov pomocou LSTM BiRNN}{section.5.2}% 31
-\BOOKMARK [2][-]{subsection.5.2.3}{Hlbok\341 konvolucn\341 neur\363nov\341 siet}{section.5.2}% 32
-\BOOKMARK [0][-]{figure.5.4}{Literat\372ra}{}% 33
+\BOOKMARK [2][-]{subsection.5.1.2}{Predikcia n\341kupov pomocou LSTM BiRNN}{section.5.1}% 29
+\BOOKMARK [2][-]{subsection.5.1.3}{Hlbok\341 konvolucn\341 neur\363nov\341 siet}{section.5.1}% 30
+\BOOKMARK [0][-]{chapter.6}{Dizajn}{}% 31
+\BOOKMARK [1][-]{section.6.1}{N\341vrh}{chapter.6}% 32
+\BOOKMARK [2][-]{subsection.6.1.1}{Predspracovanie}{section.6.1}% 33
+\BOOKMARK [3][-]{subsubsection.6.1.1.1}{Vyva\236ovanie datasetu}{subsection.6.1.1}% 34
+\BOOKMARK [3][-]{subsubsection.6.1.1.2}{Normaliz\341cia}{subsection.6.1.1}% 35
+\BOOKMARK [3][-]{subsubsection.6.1.1.3}{Architekt\372ra siete}{subsection.6.1.1}% 36
+\BOOKMARK [1][-]{section.6.2}{Implement\341cia}{chapter.6}% 37
+\BOOKMARK [0][-]{chapter.7}{V\375sledky}{}% 38
+\BOOKMARK [1][-]{section.7.1}{Tr\351novanie}{chapter.7}% 39
+\BOOKMARK [1][-]{section.7.2}{Testovanie}{chapter.7}% 40
+\BOOKMARK [0][-]{section.7.2}{Literat\372ra}{}% 41
+\BOOKMARK [0][-]{appendix.A}{Technick\341 dokument\341cia}{}% 42
+\BOOKMARK [1][-]{section.A.1}{Implement\341cia}{appendix.A}% 43
+\BOOKMARK [0][-]{appendix.B}{Pou\236\355vatelsk\341 dokument\341cia}{}% 44
+\BOOKMARK [0][-]{appendix.C}{Elektronick\351 m\351dium}{}% 45
+\BOOKMARK [0][-]{appendix.D}{Pl\341n letn\351ho semestra - DP3}{}% 46

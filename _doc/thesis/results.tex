@@ -1,8 +1,22 @@
 \newpage
 
 \chapter{Výsledky}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
 
-\section{Časť}
-\label{Časť}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+\section{Trénovanie}
+
+Trénovanie prebiehalo za použitia optimalizačnej stratégie ADAM. Počiatočná rýchlosť učenia je 0.001. Počet neurónov skrytej vrstvy je 128.\newline
+Pracujeme s podmnožinou o veľkosti 100 tisíc klikov, z ktorej je vygenerovaných 20 tisíc vstupných vektorov pre tréningovú množinu. Validačná a testovacia množina obsahujú 2,6 tisíc vektorov, tj. 10 \% datasetu pre každú. Po vyvážení tried prebieha učenie na vzorke 18 tisíc vstupných vektorov pre triedu nákupných aj nenákupných sessions. Spolu je teda sieť učená na datasete 37 tisíc vzoriek. Vzorky sú pred vstupom zamiešané a rozdelené do úsekov. Po každom úseku je evaluovaná sieť voči validačnej množine.\newline
+Tréning je zastavovaný, keď validačná množina prestáva zaznamenávať zlepšovanie oproti predchádzajúcej epoche. Keďže je štatisticky možné aby sa objavilo jedno zhoršenie počas tréningu, sieť je zastavovaná ak na validačnej množine nedojde k zlepšeniu väčšiemu ako 0.25 \% 3x po sebe. 
+
+\section{Testovanie}
+\label{testing}
+
+Popri samotnej validačnej množine sú vyhodnocované aj metriky tried klasifikácie:
+
+\begin{my_itemize}
+	\myitem{True Positive}	
+	\myitem{True Negative}
+	\myitem{False Positive}
+	\myitem{False Negative}
+\end{my_itemize}
+
