@@ -10,12 +10,12 @@ Táto problematika zahŕňa podproblémy, ktorým sa venujeme ako analýza náku
  
 \section{Cross-selling}
 \label{cross_selling}
-Cross-selling reprezentuje generický názov pre snahu predať prídavné produkty existujúcemu zákazníkovi. V snahe neodradiť zákazníka nezaujímavými ponukami sa kladie dôraz na výber najrelevantnejších produktov, keďže je dôležité zobraziť zákazníkovi čo najmenej ponúk. Zahltenie zákazníka ponukami, ktoré pre neho nie sú relevantné totiž často vedie k nepríjemnému zážitku zákazníka a prejavuje sa ako na nákupe tak aj na šanci, že zákazník sa znovu rozhodne využiť konkrétny portál pre elektronický nákup v budúcnosti. Cross-selling je často charakterizovaný v zmysle ,,Ako predstavíme správny produkt správnemu zákazníkovi v správnom čase za pomoci správneho komunikačného kanálu pre zaistenie dlhodobého úspechu".
+Cross-selling reprezentuje generický názov pre snahu predať zákazníkovi prídavné produkty k jeho aktuálnemu výberu. V snahe neodradiť zákazníka nezaujímavými ponukami sa kladie dôraz na výber najrelevantnejších produktov, keďže je dôležité zobraziť zákazníkovi čo najmenej ponúk. Zahltenie zákazníka ponukami, ktoré pre neho nie sú relevantné totiž často vedie k nepríjemnému zážitku zákazníka a prejavuje sa ako na nákupe tak aj na šanci, že zákazník sa znovu rozhodne využiť konkrétny portál pre elektronický nákup v budúcnosti. Cross-selling je často charakterizovaný v zmysle ,,Ako predstavíme správny produkt správnemu zákazníkovi v správnom čase za pomoci správneho komunikačného kanálu pre zaistenie dlhodobého úspechu" ~\cite{li2011cross}.
 
-\section{Analýza nákupného košíka}
+\subsection{Analýza nákupného košíka}
 \label{market_basket_analysis}
 
-Populárna technika využívaná pre cross-selling sa nazýva MBA. Hlavná idea spočíva v tom, že produkty, ktoré si už zákazník vybral v aktuálnom nákupe obsahujú cenné informácie o smerovaní odporúčania pre zákazníka. MBA využíva tri základné metriky pre počítanie súvislostí medzi položkami nákupov vzhľadom na dostupné historické dáta. 
+Populárna technika využívaná pre cross-selling sa nazýva MBA. Hlavná idea spočíva v tom, že produkty, ktoré si už zákazník vybral v aktuálnom nákupe obsahujú cenné informácie o smerovaní odporúčania pre zákazníka. MBA využíva tri základné metriky pre vyhodnocovanie relevancie pravidiel vzhľadom na dostupné historické dáta~\ref{nengsih2015comparative}. 
 
 \begin{my_itemize}
 	\item {Support}
@@ -23,21 +23,21 @@ Populárna technika využívaná pre cross-selling sa nazýva MBA. Hlavná idea 
 	\item {Lift}
 \end{my_itemize}
 
-\subsection{Support}
+\subsubsection{Support}
 \label{support}
-Neobvyklé udalosti či položky často predstavujú informácie, ktoré nemajú dostatočný význam pre ich sledovanie. Support predstavuje spôsob, ako ich ignorovať. Pre konkrétny produkt/službu je sledovaný výskyt v dátach. Pokiaľ nedosahuje stanovenú úroveň, položka je ignorovaná ako nezaujímavá pre analýzu.
+Neobvyklé udalosti či položky často predstavujú informácie, ktoré nemajú dostatočný význam pre ich sledovanie. Support predstavuje metriku vyhodnotenia dát ktoré chceme ich ignorovať v apriori algoritme. Pre konkrétny produkt/službu je sledovaný výskyt v dátach. Pokiaľ nedosahuje stanovenú úroveň, dáta sú ignorované ako nezaujímavé pre analýzu.
 
-Položky, ktoré sú takýmto spôsobom zredukované, sú následne analyzované podľa apriori algoritmu. \textbf{Apriori algoritmus} združuje často nakupované položky podľa ich spoločného výskytu v nákupoch. Algoritmus pracuje iteratívne - najprv vytvára dvojice, potom trojice, atď., až kým neexistujú skupiny, ktoré by dosahovali potrebné minimum spoločných výskytov nato, aby boli vyhodnotené ako skupina.
+Položky, ktoré sú takýmto spôsobom zredukované, sú následne analyzované podľa apriori algoritmu. \textbf{Apriori algoritmus} združuje často nakupované položky podľa ich spoločného výskytu v nákupoch. Algoritmus pracuje iteratívne - najprv vytvára dvojice, potom trojice, atď., až kým neexistujú skupiny, ktoré by dosahovali potrebnú frekvenciu výskytov nato, aby boli vyhodnotené ako skupina.
 
-\subsection{Confidence}
+\subsubsection{Confidence}
 \label{confidence}
-Confidence vyhodnocuje podmieňenú pravdepodobnosť výskytu jednej položky alebo skupiny položiek(RHS - right hand side) za predpokladu, že sa už v košíku nachádza iná položka alebo skupina(LHS - left hand side).
+Metrika confidence vyhodnocuje podmieňenú pravdepodobnosť(P - probability) výskytu jedného pravidla alebo skupiny pravidiel(RHS - right hand side) za predpokladu, že sa už evidujeme pravidlo alebo pravidlá(LHS - left hand side).
 
 $conf(LHS\to RHS) = P(RHS | LHS) = \frac{P(RHS \cap LHS)}{P(LHS)} = \frac{supp(LHS\cap RHS)}{supp(LHS)}$
 
-\subsection{Lift}
+\subsubsection{Lift}
 \label{lift}
-Lift predstavuje mieru zlepšenia výskytu hodnotenej položky za predpokladu položky v košíku. Je to pomer pravdepodobností výskytu oboch položiek v pomere k pravdepodobnosti výskytu položky, ktorú sa chystáme odporučiť(RHS)
+Lift predstavuje mieru zlepšenia výskytu hodnoteného pravidla za predpokladu iného pravidla. Je to pomer pravdepodobností výskytu oboch pravidiel v pomere k pravdepodobnosti výskytu pravidla, ktorého existenciu evidujeme(RHS)
 
 $lift(LHS\to RHS) = \frac{P(RHS \cap LHS)}{P(RHS)} = \frac{conf(LHS\to RHS)}{supp(RHS)}$
 
@@ -63,7 +63,9 @@ Narozdiel od predošlého prístupu, kolaboratívne systémy sa spoliehajú na n
 \subsection{Hybridné systémy}
 \label{hybrid_recommenders}
 
-Kombinácie prístupov sa snažia prekonať nedostatky oboch prístupov vzájomným dopĺňaním sa. Existuje niekoľko prístupov, ktorými je možné kombinovať prístupy ~\cite{burke2002hybrid}:
+Kombinácie prístupov sa snažia prekonať nedostatky oboch prístupov vzájomným dopĺňaním sa. 
+
+Existuje niekoľko prístupov, ktorými je možné kombinovať prístupy ~\cite{burke2002hybrid}:
 
 \begin{my_itemize}
 	\item{Váhovanie} - kombinácia výstupov oboch systémov do jedného odporúčania
@@ -80,6 +82,14 @@ Kombinácie prístupov sa snažia prekonať nedostatky oboch prístupov vzájomn
 
 Slabinou odporúčacích systémov sú nedostatočné historické dáta. Problém predstavujú hlavne pre nových používateľov, ktorí si nevybrali dostatok položiek aby im bol vygenerovaný používateľský profil. V takomto prípade nie je možné robiť porovnanie s ostatnými používateľmi ani generovať na základe už vybraných položiek. Je to problémom kolaboratívneho aj obsahového odporúčania. Podobný problém predstavuje ohodnotená vzorka položiek. Je možné generovať odporúčania podobných položiek, ale bez ohodnotenia svojej skúsenosti predchádzajúcim používateľom nie je nijaká záruka, že odporúčanie bude vhodné~\cite{adomavicius2005toward}.
 
+Nedostatky prístupov vznikajú z neschopnosti nájsť asociácie medzi používateľmi a produktami:
+
+\begin{my_itemize}
+	\item{Problém nového používateľa} - neschopnosť priradiť používateľa k iným používateľom pre nedostatok porovnateľných preferencií
+	\item{Problém nového produktu} - neschopnosť odporučiť produkt, ktorý sa zatiaľ nenachádza u iných používateľov
+	\item{Problém riedkosti} - kolaboratívne systémy vyžadujú kritickú masu používateľov, pri ktorej začínajú byť efektívne. Počet ohodnotení produktov je navyše často nepomerne menší k počtu odporúčaní, ktoré je nutné generovať.
+\end{my_itemize} 
+
 \chapter{Dáta sprístupnené pre prácu}
 \label{analyza_data}
 
@@ -90,11 +100,11 @@ Pre túto prácu boli sprístupnené dáta z používateľských prístupov na s
 
 Pri všetkých používateľských prístupoch a aktivitách portál eviduje potenciálne dôležité dáta o týchto prístupoch pre možnosti dátovej analytiky a rozpoznávania trendov v správaní zákazníkov pre generovanie pridanej hodnoty pomocou prispôsobovania sa a individuálneho prístupu k zákazníkom. Takéto biznis stratégie vedú k maximalizovaniu zisku z predaja a zákazníckej spokojnosti pri práci s portálom. Dáta sú kategorizované a inak spracúvané do použiteľnej podoby. Výsledkom je dataset, ktorý slúži ako základ pre prácu odporúčacích systémov, ktoré táto práca skúma.
 
-\subsection{Používateľská session}
+\subsection{Používateľské sedenie}
 \label{session}
-Snahou dátového zberu je schopnosť rozpoznať zákazníka, ktorý pristupuje k portálu. Jeden ucelený prístup k portálu sa nazýva \textbf{používateľská session}. Charakterizuje ju používateľ a jeho navigácia hierarchiou stránok portálu. Jedinečný používateľ je charakterizovaný unikátnym identifikátorom - \textbf{cookie}, ktorá je sprostredkovaná prehliadačom používateľa portálu. Problematika cookie spočíva v tom, že jeden používateľ môže vystupovať pod rôznymi cookie identifikátormi. Takáto situácia môže byť spôsobená prístupom z rôznych zariadení alebo cieleným používateľským zásahom do cookie - zmazaním, po ktorom používateľ odosiela cez prehliadač odlišnú cookie identifikáciu. Session ohraničujúca jeden prístup je rozdeľovaná pokiaľ používateľ presiahne časový rámec vyhradený pre jednu session, ktorý štandardne predstavuje 30 minút ~\cite{zhou2010research}.
+Snahou dátového zberu je schopnosť rozpoznať charakteristiky zákazníka, ktorý pristupuje k produktom a službám. Jeden ucelený prístup k portálu sa nazýva \textbf{používateľské sedenie}. Charakterizuje ju používateľ a jeho navigácia hierarchiou stránok portálu. Jedinečný používateľ je charakterizovaný unikátnym identifikátorom - \textbf{cookie}, ktorá je sprostredkovaná prehliadačom používateľa portálu. Problematika cookie spočíva v tom, že jeden používateľ môže vystupovať pod rôznymi cookie identifikátormi. Takáto situácia môže byť spôsobená prístupom z rôznych zariadení alebo cieleným používateľským zásahom do cookie - zmazaním, po ktorom používateľ odosiela cez prehliadač odlišnú cookie identifikáciu. Session ohraničujúca jeden prístup je rozdeľovaná pokiaľ používateľ presiahne časový rámec vyhradený pre jedno sedenie, ktorý štandardne predstavuje 30 minút, po ktorých je používateľské sedenie prerušené timeoutom a ďaľšie akcie zo strany používateľa sa považujú za nové samostatné sedenie.  ~\cite{zhou2010research}.
 
-Medzi najdôležitejšie dostupné údaje z platobného portálu patria:
+Medzi najdôležitejšie dostupné údaje z datasetu patria:
 
 \begin{my_itemize}
 	\item {Cookie}
@@ -102,8 +112,12 @@ Medzi najdôležitejšie dostupné údaje z platobného portálu patria:
 	\item {Čas aktivity}
 	\item {Prehliadaný obsah}
 	\item {Druh aktivity}
+	\item {Kategória produktu}
+	\item {Cenový rozsah ponuky}
+	\item {Lokalita služby/produktu}
+	\item {Časový rozsah ponuky}
+	\item {Dostupnosť ponuky}
 	\item {Dodávateľ tretej strany}
-	\item {...}
 \end{my_itemize}
 
 Z uvedených údajov je možné roztriediť cookies a analyzovať jednotlivé prístupy, pohyb po portáli a položkách(produkty a služby) a nákupy.
@@ -164,9 +178,9 @@ Na výsledok $o_{i}^{k+1}$ sa následne aplikuje aktivačná funkcia $f$ podľa 
 \section{Učenie neurónovej siete}
 \label{analyza_ucenie_nn}
 
-Učenie predstavuje kľúčovú aktivitou pre schopnosť siete produkovať požadované výsledky. Spočíva vo vystavovaní neurónovej siete tréningovým dátam, ktoré sa sieť snaží interpretovať.
+Učenie predstavuje kľúčovú aktivitu pre schopnosť siete produkovať požadované výsledky. Spočíva vo vystavovaní neurónovej siete tréningovým dátam, ktoré sa sieť snaží interpretovať.
 
-\textbf{Učenie s učiteľom} je metóda, pri ktorej je dostupná sada tréningových dát ,,označená". Pri interpretovaní výsledku je možné okamžite určiť, aká chyba nastala a následne ju propagovať do siete. Na toto sa využíva tzv. \textit{spätná propagácia}(backpropagation), ktorá upravuje váhy siete v rozsahu chyby, ktorá nastala - rozdiel medzi správnym výsledkom pre daný vstup a samotným výsledkom siete.
+\textbf{Učenie s učiteľom} je metóda, pri ktorej je dostupná sada tréningových dát ,,označená", t.j. je dostupná hľadaná informácia/správne riešenie, ktoré má neurónová sieť generovať. Pri interpretovaní výsledku je možné okamžite určiť, aká chyba nastala a následne ju propagovať do siete. Na toto sa využíva tzv. \textit{spätná propagácia}(backpropagation), ktorá upravuje váhy siete v rozsahu chyby, ktorá nastala - rozdiel medzi správnym výsledkom pre daný vstup a samotným výsledkom siete.
 \noindent
 
 \textbf{Učenie bez učiteľa} predstavuje alternatívnu metódu, pri ktorej tréningové dáta nemajú dostupné výsledky. Neurónová sieť sa sama učí rozhodnúť, čo je pre ňu relevantné. Učenie bez učiteľa predstavuje možnosť ako získať takmer neobmedzené množstvá tréningových dát tam, kde učenie s učiteľom vyžaduje manuálne a kvôli časovej náročnosti nedostupné označovanie.
@@ -262,18 +276,18 @@ V tejto časti sa zaoberáme štúdiami skúmajúcimi aplikáciu data-miningu pr
 RecSys Challenge 2015 bola súťaž v data-miningu zameranom na odporúčacie zariadenia vyhlásená organizáciou ACM. Súťažiaci mali možnosť implementovať riešenie, ktoré by dokázalo s čo najväčšou úspešnosťou predpovedať na testovacej množine nákupy v online obchode~\cite{ben2015recsys}.
 
 \subsection{Dáta}
-Pre túto súťaž boli poskytnuté dáta od vlastníka väčšieho európskeho portálu pre elektronický predaj. Dáta reprezentujú zhruba 6 mesačnú aktivitu používateľov na portáli. Dokopy súbory obsahujú vyše 33 miliónov záznamov z klikov zoskupených do 9.5 milióna sessions. Z toho bolo predaných 1.1 milióna položiek. Dáta sú rozdelené do dvoch súborov:
+Pre túto súťaž boli poskytnuté dáta od vlastníka väčšieho európskeho portálu pre elektronický predaj. Dáta reprezentujú zhruba 6 mesačnú aktivitu používateľov na portáli. Dokopy súbory obsahujú vyše 33 miliónov záznamov z klikov zoskupených do 9.5 milióna sedení. Z toho bolo predaných 1.1 milióna položiek. Dáta sú rozdelené do dvoch súborov:
 
 \begin{my_itemize}
 	\item{yoochoose-clicks.dat}\newline
-	- ID session, čas, ID položky, kategória položky
+	- ID sedenia, čas, ID položky, kategória položky
 	\newline
 	\item{yoochoose-buys.dat}\newline
-	- ID session, čas, ID položky, cena, množstvo
+	- ID sedenia, čas, ID položky, cena, množstvo
 	
 \end{my_itemize}
 
-Cieľom súťaže bolo predpovedať, ktoré používateľské sessions budú nákupné a ktoré z prehliadaných položiek budú kúpené. Metrikou pre úspešnosť bol vzorec:
+Cieľom súťaže bolo predpovedať, ktoré používateľské sedenia budú nákupné a ktoré z prehliadaných položiek budú kúpené. Metrikou pre úspešnosť bol vzorec:
 
 
 \label{recsys_evaluation}
@@ -288,12 +302,12 @@ $$
 kde platí:
 
 \begin{my_itemize}
-	\item{Sl} - počet session vložených ako riešenie
-	\item{S} - počet všetkých sessions v teste
-	\item{s} - session v teste
-	\item{Sb} - počet nákupných sessions v teste
-	\item{As} - sada predikovaných nákupov v session s
-	\item{Bs} - sada kúpených položiek v session s
+	\item{Sl} - počet sedení vložených ako riešenie
+	\item{S} - počet všetkých sedení v teste
+	\item{s} - sedenie v teste
+	\item{Sb} - počet nákupných sedení v teste
+	\item{As} - sada predikovaných nákupov v sedení s
+	\item{Bs} - sada kúpených položiek v sedení s
 \end{my_itemize}
 
 Perfektné skóre dosiahnuteľné pre tento dataset s danou metrikou je 135176, pričom víťazný tím dosiahol skóre 63102. Na obrázku \ref{fig:recsys} možno sledovať najlepšie riešenia v priebehu mesiacov.
@@ -309,7 +323,7 @@ Perfektné skóre dosiahnuteľné pre tento dataset s danou metrikou je 135176, 
 \subsection{Predikcia nákupov pomocou LSTM BiRNN}
 \label{yoochoose_lstm}
 
-Štúdia~\cite{wu2015neural} využíva rekurentnú neurónovú sieť s krátkou dlhodobou pamäťou(LSTM) pri predikcií YooChoose datasetu vzorov v klikaní na stránkach internetového predajného portálu. Prístup oddeľuje dve separátne problematiky - predikciu nákupných sessions a následne predikciu kúpených položiek. 
+Štúdia~\cite{wu2015neural} využíva rekurentnú neurónovú sieť s krátkou dlhodobou pamäťou(LSTM) pri predikcií YooChoose datasetu vzorov v klikaní na stránkach internetového predajného portálu. Prístup oddeľuje dve separátne problematiky - predikciu nákupných sedení a následne predikciu kúpených položiek. 
 
 Dostupné dáta~\ref{recsys_challenge} sú predspracované na vstup do neurónovej siete. Tá následne po tréningu predpovedá výsledky pre testovacie dáta. Po predspracovaní vyzerajú jednotlivé vstupy do siete nasledovne:\newline
 \linebreak
@@ -348,21 +362,21 @@ Dostupné dáta~\ref{recsys_challenge} sú predspracované na vstup do neurónov
 \parbox{.45\linewidth}{
 	\begin{tabular}{||c||} 
 		\hline
-		Predpovedanie nákupnej session  \\ [0.5ex] 
+		Predpovedanie nákupného sedenia  \\ [0.5ex] 
 		\hline\hline
-		Počet kikov v session  \\ 
+		Počet kikov v sedení  \\ 
 		\hline
-		Počet unikátnych položiek v session  \\
+		Počet unikátnych položiek v sedení  \\
 		\hline
 		Počet klikov za minútu \\
 		\hline
-		Minimálny počet klikov v session \\
+		Minimálny počet klikov v sedení \\
 		\hline
-		Maximálny počet klikov v session  \\ 
+		Maximálny počet klikov v sedení  \\ 
 		\hline
 		Priemerný počet klikov \\
 		\hline
-		Trvanie session \\
+		Trvanie sedenia \\
 		\hline
 		Priemerné trvanie kliku\\
 		\hline

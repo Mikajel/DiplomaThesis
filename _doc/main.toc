@@ -3,43 +3,43 @@
 \contentsline {section}{\numberline {1.1}Pou\IeC {\v z}it\IeC {\'e} skratky}{2}{section.1.1}
 \contentsline {chapter}{\numberline {2}Probl\IeC {\'e}mov\IeC {\'a} oblas\IeC {\v t}}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Cross-selling}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Anal\IeC {\'y}za n\IeC {\'a}kupn\IeC {\'e}ho ko\IeC {\v s}\IeC {\'\i }ka}{4}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Support}{4}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Confidence}{5}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Lift}{5}{subsection.2.2.3}
-\contentsline {section}{\numberline {2.3}Odpor\IeC {\'u}\IeC {\v c}acie syst\IeC {\'e}my}{5}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Odpor\IeC {\'u}\IeC {\v c}acie syst\IeC {\'e}my zalo\IeC {\v z}en\IeC {\'e} na obsahu}{6}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Kolaborat\IeC {\'\i }vne odpor\IeC {\'u}\IeC {\v c}acie syst\IeC {\'e}my}{6}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Hybridn\IeC {\'e} syst\IeC {\'e}my}{6}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Probl\IeC {\'e}my odpor\IeC {\'u}\IeC {\v c}ania}{7}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.1.1}Anal\IeC {\'y}za n\IeC {\'a}kupn\IeC {\'e}ho ko\IeC {\v s}\IeC {\'\i }ka}{4}{subsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.1}Support}{4}{subsubsection.2.1.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.2}Confidence}{5}{subsubsection.2.1.1.2}
+\contentsline {subsubsection}{\numberline {2.1.1.3}Lift}{5}{subsubsection.2.1.1.3}
+\contentsline {section}{\numberline {2.2}Odpor\IeC {\'u}\IeC {\v c}acie syst\IeC {\'e}my}{5}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Odpor\IeC {\'u}\IeC {\v c}acie syst\IeC {\'e}my zalo\IeC {\v z}en\IeC {\'e} na obsahu}{6}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Kolaborat\IeC {\'\i }vne odpor\IeC {\'u}\IeC {\v c}acie syst\IeC {\'e}my}{6}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Hybridn\IeC {\'e} syst\IeC {\'e}my}{6}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Probl\IeC {\'e}my odpor\IeC {\'u}\IeC {\v c}ania}{7}{subsection.2.2.4}
 \contentsline {chapter}{\numberline {3}D\IeC {\'a}ta spr\IeC {\'\i }stupnen\IeC {\'e} pre pr\IeC {\'a}cu}{8}{chapter.3}
 \contentsline {section}{\numberline {3.1}Z\IeC {\'\i }skavanie d\IeC {\'a}t}{8}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Pou\IeC {\v z}\IeC {\'\i }vate\IeC {\v l}sk\IeC {\'a} session}{9}{subsection.3.1.1}
-\contentsline {chapter}{\numberline {4}Neur\IeC {\'o}nov\IeC {\'e} siete}{10}{chapter.4}
-\contentsline {section}{\numberline {4.1}\IeC {\v S}trukt\IeC {\'u}ra}{10}{section.4.1}
-\contentsline {section}{\numberline {4.2}U\IeC {\v c}enie neur\IeC {\'o}novej siete}{12}{section.4.2}
-\contentsline {section}{\numberline {4.3}Optimaliz\IeC {\'a}cia}{13}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Gradient descent}{13}{subsection.4.3.1}
-\contentsline {section}{\numberline {4.4}Hyperparametre}{14}{section.4.4}
-\contentsline {section}{\numberline {4.5}Aktiva\IeC {\v c}n\IeC {\'a} funkcia}{14}{section.4.5}
-\contentsline {section}{\numberline {4.6}Rekurentn\IeC {\'e} neur\IeC {\'o}nov\IeC {\'e} siete}{15}{section.4.6}
-\contentsline {section}{\numberline {4.7}Siete s dlhou kr\IeC {\'a}tkodobou pam\IeC {\"a}\IeC {\v t}ou - LSTM}{16}{section.4.7}
-\contentsline {chapter}{\numberline {5}V\IeC {\'y}skum v danej oblasti}{18}{chapter.5}
-\contentsline {section}{\numberline {5.1}RecSys Challenge 2015}{18}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}D\IeC {\'a}ta}{18}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Predikcia n\IeC {\'a}kupov pomocou LSTM BiRNN}{20}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Hlbok\IeC {\'a} konvolu\IeC {\v c}n\IeC {\'a} neur\IeC {\'o}nov\IeC {\'a} sie\IeC {\v t}}{22}{subsection.5.1.3}
-\contentsline {chapter}{\numberline {6}Dizajn}{24}{chapter.6}
-\contentsline {section}{\numberline {6.1}N\IeC {\'a}vrh}{24}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Predspracovanie}{24}{subsection.6.1.1}
-\contentsline {subsubsection}{\numberline {6.1.1.1}Vyva\IeC {\v z}ovanie datasetu}{25}{subsubsection.6.1.1.1}
-\contentsline {subsubsection}{\numberline {6.1.1.2}Normaliz\IeC {\'a}cia}{26}{subsubsection.6.1.1.2}
-\contentsline {subsubsection}{\numberline {6.1.1.3}Architekt\IeC {\'u}ra siete}{26}{subsubsection.6.1.1.3}
-\contentsline {section}{\numberline {6.2}Implement\IeC {\'a}cia}{27}{section.6.2}
-\contentsline {chapter}{\numberline {7}V\IeC {\'y}sledky}{28}{chapter.7}
-\contentsline {section}{\numberline {7.1}Tr\IeC {\'e}novanie}{28}{section.7.1}
-\contentsline {section}{\numberline {7.2}Testovanie}{29}{section.7.2}
-\contentsline {chapter}{Literat\IeC {\'u}ra}{30}{section.7.2}
+\contentsline {subsection}{\numberline {3.1.1}Pou\IeC {\v z}\IeC {\'\i }vate\IeC {\v l}sk\IeC {\'e} sedenie}{9}{subsection.3.1.1}
+\contentsline {chapter}{\numberline {4}Neur\IeC {\'o}nov\IeC {\'e} siete}{11}{chapter.4}
+\contentsline {section}{\numberline {4.1}\IeC {\v S}trukt\IeC {\'u}ra}{11}{section.4.1}
+\contentsline {section}{\numberline {4.2}U\IeC {\v c}enie neur\IeC {\'o}novej siete}{13}{section.4.2}
+\contentsline {section}{\numberline {4.3}Optimaliz\IeC {\'a}cia}{14}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Gradient descent}{14}{subsection.4.3.1}
+\contentsline {section}{\numberline {4.4}Hyperparametre}{15}{section.4.4}
+\contentsline {section}{\numberline {4.5}Aktiva\IeC {\v c}n\IeC {\'a} funkcia}{16}{section.4.5}
+\contentsline {section}{\numberline {4.6}Rekurentn\IeC {\'e} neur\IeC {\'o}nov\IeC {\'e} siete}{16}{section.4.6}
+\contentsline {section}{\numberline {4.7}Siete s dlhou kr\IeC {\'a}tkodobou pam\IeC {\"a}\IeC {\v t}ou - LSTM}{17}{section.4.7}
+\contentsline {chapter}{\numberline {5}V\IeC {\'y}skum v danej oblasti}{19}{chapter.5}
+\contentsline {section}{\numberline {5.1}RecSys Challenge 2015}{19}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}D\IeC {\'a}ta}{19}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Predikcia n\IeC {\'a}kupov pomocou LSTM BiRNN}{21}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Hlbok\IeC {\'a} konvolu\IeC {\v c}n\IeC {\'a} neur\IeC {\'o}nov\IeC {\'a} sie\IeC {\v t}}{23}{subsection.5.1.3}
+\contentsline {chapter}{\numberline {6}Dizajn}{25}{chapter.6}
+\contentsline {section}{\numberline {6.1}N\IeC {\'a}vrh}{25}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Predspracovanie}{25}{subsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.1.1}Vyva\IeC {\v z}ovanie datasetu}{26}{subsubsection.6.1.1.1}
+\contentsline {subsubsection}{\numberline {6.1.1.2}Normaliz\IeC {\'a}cia}{27}{subsubsection.6.1.1.2}
+\contentsline {subsubsection}{\numberline {6.1.1.3}Architekt\IeC {\'u}ra siete}{27}{subsubsection.6.1.1.3}
+\contentsline {section}{\numberline {6.2}Implement\IeC {\'a}cia}{28}{section.6.2}
+\contentsline {chapter}{\numberline {7}V\IeC {\'y}sledky}{29}{chapter.7}
+\contentsline {section}{\numberline {7.1}Tr\IeC {\'e}novanie}{29}{section.7.1}
+\contentsline {section}{\numberline {7.2}Testovanie}{30}{section.7.2}
+\contentsline {chapter}{Literat\IeC {\'u}ra}{31}{figure.7.1}
 \contentsline {chapter}{\numberline {A}Technick\IeC {\'a} dokument\IeC {\'a}cia}{A-1}{appendix.A}
 \contentsline {section}{\numberline {A.1}Implement\IeC {\'a}cia}{A-1}{section.A.1}
 \contentsline {paragraph}{Modul DataHandler}{A-1}{section.A.1}

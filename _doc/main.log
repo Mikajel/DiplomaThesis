@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.5)  14 DEC 2016 02:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.5)  27 JAN 2017 17:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -678,17 +678,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.6 \newpage
+l.8 \newpage
              [1
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 12.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 14.
  (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 12.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 14.
 )
 (./thesis/analysis.texpdfTeX warning (ext4): destination with the same identifi
 er (name{page.2}) has been already used, duplicate ignored
@@ -709,7 +709,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
 [3
 
-] [4]
+]
+
+LaTeX Warning: Reference `nengsih2015comparative' on page 4 undefined on input 
+line 18.
+
+[4]
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
@@ -730,7 +735,7 @@ Package hyperref Warning: Composite letter `\textasciicaron+c'
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 78.
+(hyperref)                removing `\textasciicaron' on input line 80.
 
 [7]
 Kapitola 3.
@@ -740,169 +745,191 @@ Kapitola 3.
 
 Package hyperref Warning: Composite letter `\textasciicaron+l'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 93.
+(hyperref)                removing `\textasciicaron' on input line 103.
 
-[9]
+[9] [10]
 Kapitola 4.
-[10
+[11
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 139--143
+Underfull \hbox (badness 10000) in paragraph at lines 153--157
 
  []
 
-[11] <figures/neuronoutput.png, id=345, 241.90375pt x 56.21pt>
+[12] <figures/neuronoutput.png, id=353, 241.90375pt x 56.21pt>
 File: figures/neuronoutput.png Graphic file (type png)
 
 <use figures/neuronoutput.png>
-Package pdftex.def Info: figures/neuronoutput.png used on input line 150.
+Package pdftex.def Info: figures/neuronoutput.png used on input line 164.
 (pdftex.def)             Requested size: 154.81786pt x 35.97426pt.
 
-<figures/fnn.png, id=347, 472.01344pt x 284.56313pt>
+<figures/fnn.png, id=355, 472.01344pt x 284.56313pt>
 File: figures/fnn.png Graphic file (type png)
  <use figures/fnn.png>
-Package pdftex.def Info: figures/fnn.png used on input line 160.
+Package pdftex.def Info: figures/fnn.png used on input line 174.
 (pdftex.def)             Requested size: 302.08757pt x 182.11977pt.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 164.
+(hyperref)                removing `\textasciicaron' on input line 178.
 
-[12 <./figures/neuronoutput.png> <./figures/fnn.png>] [13]
+[13 <./figures/neuronoutput.png> <./figures/fnn.png>] [14]
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 201.
+(hyperref)                removing `\textasciicaron' on input line 215.
 
-[14] <figures/rnn.png, id=379, 507.39563pt x 284.56313pt>
+[15] <figures/rnn.png, id=386, 507.39563pt x 284.56313pt>
 File: figures/rnn.png Graphic file (type png)
 
 <use figures/rnn.png>
-Package pdftex.def Info: figures/rnn.png used on input line 220.
+Package pdftex.def Info: figures/rnn.png used on input line 234.
 (pdftex.def)             Requested size: 324.7321pt x 182.11977pt.
- [15]
-Overfull \hbox (5.0793pt too wide) in paragraph at lines 224--224
+ [16]
+Overfull \hbox (5.0793pt too wide) in paragraph at lines 238--238
 |\T1/lmr/bx/n/17.28 Siete s dl-hou krát-ko-do-bou pa-mä-´ou - LSTM| 
  []
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 224.
+(hyperref)                removing `\textasciicaron' on input line 238.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--233
+Underfull \hbox (badness 10000) in paragraph at lines 241--247
 
  []
 
-[16 <./figures/rnn.png>]
-<figures/peepholes.png, id=403, 910.90312pt x 465.23813pt>
+[17 <./figures/rnn.png>]
+<figures/peepholes.png, id=410, 910.90312pt x 465.23813pt>
 File: figures/peepholes.png Graphic file (type png)
 
 <use figures/peepholes.png>
-Package pdftex.def Info: figures/peepholes.png used on input line 249.
+Package pdftex.def Info: figures/peepholes.png used on input line 263.
 (pdftex.def)             Requested size: 455.45044pt x 232.61848pt.
 
-Overfull \hbox (65.45044pt too wide) in paragraph at lines 249--249
+Overfull \hbox (65.45044pt too wide) in paragraph at lines 263--263
  [] 
  []
 
-[17 <./figures/peepholes.png>]
+[18 <./figures/peepholes.png>]
 Kapitola 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--271
+Underfull \hbox (badness 10000) in paragraph at lines 282--285
 
  []
 
-[18
+[19
 
-] <figures/recsys.png, id=422, 581.17125pt x 317.185pt>
+] <figures/recsys.png, id=429, 581.17125pt x 317.185pt>
 File: figures/recsys.png Graphic file (type png)
 
 <use figures/recsys.png>
-Package pdftex.def Info: figures/recsys.png used on input line 303.
+Package pdftex.def Info: figures/recsys.png used on input line 317.
 (pdftex.def)             Requested size: 290.58492pt x 158.5921pt.
- [19]
-Underfull \hbox (badness 10000) in paragraph at lines 314--316
+ [20]
+Underfull \hbox (badness 10000) in paragraph at lines 328--330
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--316
+Underfull \hbox (badness 10000) in paragraph at lines 328--330
 
  []
 
 
-Overfull \hbox (24.61514pt too wide) in paragraph at lines 376--376
+Overfull \hbox (21.22078pt too wide) in paragraph at lines 390--390
 [][] 
  []
 
-[20 <./figures/recsys.png>]
-<figures/recsys_yoochoose.png, id=438, 562.1pt x 409.53pt>
+[21 <./figures/recsys.png>]
+<figures/recsys_yoochoose.png, id=445, 562.1pt x 409.53pt>
 File: figures/recsys_yoochoose.png Graphic file (type png)
 
 <use figures/recsys_yoochoose.png>
-Package pdftex.def Info: figures/recsys_yoochoose.png used on input line 382.
+Package pdftex.def Info: figures/recsys_yoochoose.png used on input line 396.
 (pdftex.def)             Requested size: 314.77385pt x 229.33522pt.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 388.
+(hyperref)                removing `\textasciicaron' on input line 402.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 388.
+(hyperref)                removing `\textasciicaron' on input line 402.
 
-[21 <./figures/recsys_yoochoose.png>]
-<figures/pixelmap.png, id=447, 380.17032pt x 218.31563pt>
+[22 <./figures/recsys_yoochoose.png>]
+<figures/pixelmap.png, id=455, 380.17032pt x 218.31563pt>
 File: figures/pixelmap.png Graphic file (type png)
 
 <use figures/pixelmap.png>
-Package pdftex.def Info: figures/pixelmap.png used on input line 397.
+Package pdftex.def Info: figures/pixelmap.png used on input line 411.
 (pdftex.def)             Requested size: 349.75513pt x 200.84947pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--408
+Underfull \hbox (badness 10000) in paragraph at lines 417--422
 
  []
 
-[22 <./figures/pixelmap.png>]
-<figures/convolutional.png, id=461, 831.85782pt x 258.21469pt>
+[23 <./figures/pixelmap.png>]
+<figures/convolutional.png, id=468, 831.85782pt x 258.21469pt>
 File: figures/convolutional.png Graphic file (type png)
 
 <use figures/convolutional.png>
-Package pdftex.def Info: figures/convolutional.png used on input line 411.
+Package pdftex.def Info: figures/convolutional.png used on input line 425.
 (pdftex.def)             Requested size: 382.65924pt x 118.78018pt.
-) (./thesis/design.tex [23 <./figures/convolutional.png>]
+) (./thesis/design.tex [24 <./figures/convolutional.png>]
 Kapitola 6.
-<figures/preprocessing.png, id=474, 424.58624pt x 775.89874pt>
+<figures/preprocessing.png, id=482, 424.58624pt x 775.89874pt>
 File: figures/preprocessing.png Graphic file (type png)
 
 <use figures/preprocessing.png>
 Package pdftex.def Info: figures/preprocessing.png used on input line 15.
 (pdftex.def)             Requested size: 212.2926pt x 387.94843pt.
- [24
+ [25
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 21--23
 
  []
 
-[25 <./figures/preprocessing.png>]
+[26 <./figures/preprocessing.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
-) [26] (./thesis/results.tex [27]
+<figures/NN.png, id=495, 733.74126pt x 455.7025pt>
+File: figures/NN.png Graphic file (type png)
+ <use figures/NN.png>
+Package pdftex.def Info: figures/NN.png used on input line 41.
+(pdftex.def)             Requested size: 366.86974pt x 227.85068pt.
+
+[27]) (./thesis/results.tex [28 <./figures/NN.png>]
 Kapitola 7.
-[28
+[29
 
-])) [29] (./main.bbl [30
+]
+Underfull \hbox (badness 10000) in paragraph at lines 27--40
 
-] [31]) (./thesis/appendices.tex [32]
-(./thesis/appendix-TechDoc.tex
+ []
+
+<figures/validate.png, id=511, 1089.06876pt x 463.7325pt>
+File: figures/validate.png Graphic file (type png)
+
+<use figures/validate.png>
+Package pdftex.def Info: figures/validate.png used on input line 45.
+(pdftex.def)             Requested size: 435.61978pt x 185.4897pt.
+
+Overfull \hbox (45.61978pt too wide) in paragraph at lines 45--45
+ [] 
+ []
+
+)) [30 <./figures/validate.png>] (./main.bbl [31
+
+] [32])
+(./thesis/appendices.tex [33] (./thesis/appendix-TechDoc.tex
 Pr\IeC {\'\i }loha A.
 [1
 
@@ -936,17 +963,21 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 135.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 135.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BD5DBBD3F4E61D4EA0A5D459CFF081CC;3184.
+(rerunfilecheck)             Checksum: A43C17F6C936BC1A10680D558F86072B;3220.
+
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
  ) 
 Here is how much of TeX's memory you used:
- 13364 strings out of 494919
- 197296 string characters out of 6179680
- 321951 words of memory out of 5000000
- 16045 multiletter control sequences out of 15000+600000
- 69474 words of font info for 122 fonts, out of 8000000 for 9000
+ 13387 strings out of 494919
+ 197710 string characters out of 6179680
+ 322061 words of memory out of 5000000
+ 16060 multiletter control sequences out of 15000+600000
+ 69603 words of font info for 123 fonts, out of 8000000 for 9000
  24 hyphenation exceptions out of 8191
- 38i,8n,43p,1159b,586s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,8n,43p,1219b,586s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/en
 c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
@@ -958,10 +989,10 @@ s/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb><
 public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/sha
 re/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
-Output written on main.pdf (45 pages, 646888 bytes).
+Output written on main.pdf (46 pages, 739051 bytes).
 PDF statistics:
- 621 PDF objects out of 1000 (max. 8388607)
- 533 compressed objects within 6 object streams
- 126 named destinations out of 1000 (max. 500000)
- 19890 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 635 PDF objects out of 1000 (max. 8388607)
+ 543 compressed objects within 6 object streams
+ 130 named destinations out of 1000 (max. 500000)
+ 19900 words of extra memory for PDF output out of 20736 (max. 10000000)
 
